@@ -1,0 +1,144 @@
+Parfait — là on a le diagnostic exact 👍
+
+---
+
+# 🧠 Ce que ton système montre
+
+Tu as **un seul vrai profil utilisateur Windows** :
+
+```
+C:\Users\Aliou
+S-1-5-21-...-1001
+```
+
+Et :
+❌ **Aucun profil “Juste” n’existe réellement dans Windows**
+
+---
+
+# 🚨 Conclusion importante
+
+Ton compte est :
+
+* ✔ User : `Juste`
+* ❌ Profil Windows : n’existe pas
+* ✔ Windows a donc forcé : `Aliou` comme profil par défaut
+
+👉 C’est pour ça que :
+
+```cmd
+echo %USERPROFILE%
+C:\Users\Aliou
+```
+
+---
+
+# 💥 Ce qui s’est passé (simple)
+
+Quand le compte **Juste** a été créé :
+
+* Windows n’a pas créé de dossier profil `C:\Users\Juste`
+* il a réutilisé automatiquement `C:\Users\Aliou`
+* donc ton profil est “attaché” à Aliou
+
+---
+
+# 🎯 OBJECTIF
+
+Créer un vrai profil propre :
+
+👉 `C:\Users\Juste`
+
+et détacher Aliou
+
+---
+
+# 🔥 SOLUTION PROPRE (SAFE)
+
+## 🟢 Étape 1 — créer un nouveau profil propre
+
+### 1. Crée un utilisateur temporaire admin (sécurité)
+
+Dans PowerShell admin :
+
+```powershell id="c1"
+net user TempAdmin123 P@ssw0rd123 /add
+net localgroup administrators TempAdmin123 /add
+```
+
+---
+
+## 🟢 Étape 2 — déconnexion
+
+Déconnecte-toi de Juste
+et connecte-toi avec :
+
+👉 TempAdmin123
+
+---
+
+## 🟢 Étape 3 — reset du profil Juste
+
+Dans TempAdmin123 (admin), supprime le lien cassé :
+
+```powershell id="c2"
+wmic useraccount where name='Juste' delete
+```
+
+OU (plus propre) :
+
+```powershell id="c3"
+Remove-Item "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-3400763529-3789732195-3215627127-1001"
+```
+
+---
+
+## 🟢 Étape 4 — recréer le compte proprement
+
+```powershell id="c4"
+net user Juste /add
+net localgroup administrators Juste /add
+```
+
+---
+
+## 🟢 Étape 5 — reboot
+
+Redémarre PC
+
+👉 Windows va créer automatiquement :
+
+```
+C:\Users\Juste
+```
+
+---
+
+# 🧹 Étape finale (optionnelle)
+
+Quand tout marche :
+
+```powershell id="c5"
+net user TempAdmin123 /delete
+```
+
+---
+
+# ⚠️ Résumé simple
+
+✔ Ton problème n’est PAS un bug
+✔ C’est un profil Windows jamais créé pour Juste
+❌ Juste utilise Aliou par défaut
+✔ Il faut recréer proprement le profil
+
+---
+
+# 💬 Si tu veux
+
+Je peux aussi te faire :
+
+* un script automatique (1 clic) pour réparer tout
+* ou une méthode encore plus simple sans supprimer d’utilisateur
+* ou une migration propre de Aliou → Juste sans perte de données
+
+Dis-moi 👍

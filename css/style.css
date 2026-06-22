@@ -497,16 +497,14 @@ header {
 .cert-logos {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 16px;
   flex-wrap: wrap;
-  opacity: 0.6;
-  filter: grayscale(100%);
+  opacity: 0.7;
   transition: all 0.3s ease;
 }
 
 .cert-logos:hover {
   opacity: 1;
-  filter: grayscale(0%);
 }
 
 .cert-logo {
@@ -518,6 +516,7 @@ header {
 .cert-stats {
   display: flex;
   gap: var(--stack-lg);
+  flex-wrap: wrap;
 }
 
 .stat-item {
@@ -1141,13 +1140,19 @@ footer {
 
 .cert-logos span {
   color: var(--color-secondary);
-  opacity: 0.8;
-  border-left: 2px solid var(--color-border);
-  padding-left: 24px;
+  opacity: 0.9;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: var(--color-surface-container);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  white-space: nowrap;
 }
 .cert-logos span:first-of-type {
   border-left: none;
-  padding-left: 0;
 }
 
 /* --- Responsive Adjustments --- */
@@ -1322,6 +1327,10 @@ footer {
     text-align: left;
     max-width: 200px;
     margin: 0 auto;
+  }
+  .table-industrial th, .table-industrial td {
+    padding: 10px 12px !important;
+    font-size: 0.8125rem;
   }
 }
 

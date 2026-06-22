@@ -137,7 +137,7 @@
       <div class="hero-overlay" style="background: rgba(27, 42, 74, 0.85);"></div>
       <img src="images/hero_home.png" alt="Industrial Polymer Pipes" class="hero-bg">
       <div class="container" style="position: relative; z-index: 2;">
-        <div class="hero-content">
+        <div class="hero-content reveal">
           <span class="label-bold hero-tag">B2B Sizing & Specs</span>
           <h1 class="display-lg hero-title" style="font-size: 2.75rem;">Technical Sizing Catalog</h1>
           <p class="body-lg hero-desc">Complete listings of standard diameters, SDR ratios, wall thicknesses, and pressure classifications for our industrial pipes.</p>
@@ -150,7 +150,7 @@
       <div class="container">
         
         <!-- Tabs Navigation -->
-        <div class="tabs-container">
+        <div class="tabs-container reveal">
           <button class="tab-btn active" onclick="filterProducts('all', this)">Show All</button>
           <button class="tab-btn" onclick="filterProducts('upvc', this)">uPVC Pipes</button>
           <button class="tab-btn" onclick="filterProducts('pvc', this)">PVC Pipes</button>
@@ -161,7 +161,7 @@
         <!-- Product Grid -->
         <div class="grid grid-2" style="margin-top: 48px; margin-bottom: 80px;">
           <!-- uPVC Pipes -->
-          <div class="card-product card-horizontal" data-category="upvc">
+          <div class="card-product card-horizontal reveal" data-category="upvc">
             <div class="card-img-wrapper">
               <img src="images/product_upvc.png" alt="uPVC Piping Systems" class="card-img">
             </div>
@@ -177,7 +177,7 @@
           </div>
 
           <!-- PVC Pipes -->
-          <div class="card-product card-horizontal" data-category="pvc">
+          <div class="card-product card-horizontal reveal delay-1" data-category="pvc">
             <div class="card-img-wrapper">
               <img src="images/product_pvc.png" alt="PVC Piping Systems" class="card-img">
             </div>
@@ -193,7 +193,7 @@
           </div>
 
           <!-- CPVC Pipes -->
-          <div class="card-product card-horizontal" data-category="cpvc">
+          <div class="card-product card-horizontal reveal delay-2" data-category="cpvc">
             <div class="card-img-wrapper">
               <img src="images/product_cpvc.png" alt="CPVC Piping Systems" class="card-img">
             </div>
@@ -209,7 +209,7 @@
           </div>
 
           <!-- Fittings -->
-          <div class="card-product card-horizontal" data-category="fittings">
+          <div class="card-product card-horizontal reveal delay-3" data-category="fittings">
             <div class="card-img-wrapper">
               <img src="images/product_fittings.png" alt="Polymer Fittings" class="card-img">
             </div>
@@ -232,13 +232,13 @@
     <section class="section-padding bg-light" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
       <div class="container">
         
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="label-bold text-primary">Technical Reference Charts</span>
           <h2 class="headline-lg" style="margin-top: 8px;">Dimensional Specification Tables</h2>
         </div>
 
         <!-- uPVC Sizing Table -->
-        <div id="upvc-table" style="margin-bottom: 64px;">
+        <div id="upvc-table" class="reveal" style="margin-bottom: 64px;">
           <h3 class="headline-md text-navy" style="margin-bottom: 16px;">uPVC Sizing Chart (IS 4984)</h3>
           <p class="body-md" style="margin-bottom: 16px; color: var(--color-text-slate);">Standard SDR ratios, pressure ratings, and wall thickness configurations. Custom lengths are available upon request.</p>
           <div class="table-wrapper" style="border-radius: var(--radius-default); overflow: hidden; margin-top: 0;">
@@ -308,7 +308,7 @@
         </div>
 
         <!-- PVC Sizing Table -->
-        <div id="pvc-table" style="margin-bottom: 64px;">
+        <div id="pvc-table" class="reveal" style="margin-bottom: 64px;">
           <h3 class="headline-md text-navy" style="margin-bottom: 16px;">PVC Sizing Chart (IS 4985)</h3>
           <p class="body-md" style="margin-bottom: 16px; color: var(--color-text-slate);">Nominal wall thicknesses corresponding to working pressure classes at 27°C.</p>
           <div class="table-wrapper" style="border-radius: var(--radius-default); overflow: hidden; margin-top: 0;">
@@ -371,7 +371,7 @@
         </div>
 
         <!-- CPVC Sizing Table -->
-        <div id="cpvc-table" style="margin-bottom: 64px;">
+        <div id="cpvc-table" class="reveal" style="margin-bottom: 64px;">
           <h3 class="headline-md text-navy" style="margin-bottom: 16px;">CPVC Sizing Chart (IS 15801)</h3>
           <p class="body-md" style="margin-bottom: 16px; color: var(--color-text-slate);">Standard SDR and PN pressure series for hot and cold plumbing connections.</p>
           <div class="table-wrapper" style="border-radius: var(--radius-default); overflow: hidden; margin-top: 0;">
@@ -434,7 +434,7 @@
         </div>
 
         <!-- Fittings Technical Sizing -->
-        <div id="fittings-specs">
+        <div id="fittings-specs" class="reveal">
           <h3 class="headline-md text-navy" style="margin-bottom: 16px;">Joints &amp; Fittings Sizing Scope</h3>
           <p class="body-md" style="margin-bottom: 16px; color: var(--color-text-slate);">We supply mold dimensions from 20mm up to 200mm, ensuring continuous pipe diameter integrity.</p>
           <div class="table-wrapper" style="border-radius: var(--radius-default); overflow: hidden; margin-top: 0;">
@@ -488,7 +488,7 @@
 
     <!-- Download Catalog CTA -->
     <section class="section-padding bg-lowest">
-      <div class="container text-center">
+      <div class="container text-center reveal">
         <span class="material-symbols-outlined text-primary" style="font-size: 3rem; margin-bottom: 16px;">download_for_offline</span>
         <h2 class="headline-lg" style="margin-bottom: 12px;">Full PDF Sizing catalog</h2>
         <p class="body-md" style="max-width: 600px; margin: 0 auto 32px auto; color: var(--color-text-slate);">Includes detailed CAD drawings, packaging ratios, physical testing constants and guidelines for underground piping installation.</p>

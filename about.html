@@ -36,10 +36,14 @@
         <li><a href="products.html" class="nav-link">Products</a></li>
         <li><a href="process.html" class="nav-link">Manufacturing</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <li><a href="contact.html" class="btn btn-secondary" style="padding: 10px 20px;">Become Partner</a></li>
+        <li><a href="partner.html" class="btn btn-secondary" style="padding: 10px 20px;">Become Partner</a></li>
       </ul>
-      <button class="menu-toggle" id="menuToggle">
-        <span class="material-symbols-outlined">menu</span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
     </div>
   </header>
@@ -49,19 +53,55 @@
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
     <div class="drawer-content">
       <div class="drawer-header">
-        <span class="headline-md text-navy" style="font-weight: 700;">FILTEC MENU</span>
+        <div class="drawer-logo-text">
+          <span class="brand">FILTEC</span>
+          <span class="tagline">Polyplast Pvt Ltd</span>
+        </div>
         <button class="drawer-close" id="drawerClose">
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
-      <nav class="drawer-nav">
-        <a href="index.html" class="drawer-link">Home</a>
-        <a href="about.html" class="drawer-link active">About Us</a>
-        <a href="why-us.html" class="drawer-link">Why Us</a>
-        <a href="products.html" class="drawer-link">Products</a>
-        <a href="process.html" class="drawer-link">Manufacturing</a>
-        <a href="contact.html" class="drawer-link">Contact & Distributor</a>
-      </nav>
+      <div class="drawer-nav-section">
+        <span class="drawer-nav-label">Navigation</span>
+        <a href="index.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a href="about.html" class="drawer-link active">
+          <span class="nav-icon material-symbols-outlined">info</span>
+          About Us
+        </a>
+        <a href="why-us.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">verified</span>
+          Why Us
+        </a>
+        <a href="products.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">inventory_2</span>
+          Products
+        </a>
+        <a href="process.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">precision_manufacturing</span>
+          Manufacturing
+        </a>
+        <a href="contact.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">call</span>
+          Contact
+        </a>
+        <a href="partner.html" class="drawer-link drawer-partner-btn">
+          <span class="nav-icon material-symbols-outlined">handshake</span>
+          Become Partner
+        </a>
+      </div>
+      <div class="drawer-footer-info">
+        <div class="contact-line">
+          <span class="material-symbols-outlined">call</span>
+          <span>+91 9437505814</span>
+        </div>
+        <div class="contact-line">
+          <span class="material-symbols-outlined">mail</span>
+          <span>care@filtec.in</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -254,7 +294,7 @@
       <div class="footer-col">
         <h4 class="label-bold">Distributors</h4>
         <ul class="footer-links">
-          <li><a href="contact.html">Become a Partner</a></li>
+          <li><a href="partner.html">Become a Partner</a></li>
           <li><a href="contact.html#faq">FAQs</a></li>
           <li><a href="about.html#certifications">Certifications</a></li>
         </ul>

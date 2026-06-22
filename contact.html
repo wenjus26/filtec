@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Become a Distributor | FILTEC Polyplast</title>
-  <meta name="description" content="Contact FILTEC Polyplast sales. Apply to become an authorized piping distributor. Read our B2B procurement FAQs.">
+  <title>Contact Us | FILTEC Polyplast</title>
+  <meta name="description" content="Contact FILTEC Polyplast sales team. Submit a general inquiry, request a product quote, or get technical support for B2B piping solutions.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -76,10 +76,14 @@
         <li><a href="products.html" class="nav-link">Products</a></li>
         <li><a href="process.html" class="nav-link">Manufacturing</a></li>
         <li><a href="contact.html" class="nav-link active">Contact</a></li>
-        <li><a href="contact.html" class="btn btn-secondary" style="padding: 10px 20px;">Become Partner</a></li>
+        <li><a href="partner.html" class="btn btn-secondary" style="padding: 10px 20px;">Become Partner</a></li>
       </ul>
-      <button class="menu-toggle" id="menuToggle">
-        <span class="material-symbols-outlined">menu</span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
     </div>
   </header>
@@ -89,19 +93,55 @@
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
     <div class="drawer-content">
       <div class="drawer-header">
-        <span class="headline-md text-navy" style="font-weight: 700;">FILTEC MENU</span>
+        <div class="drawer-logo-text">
+          <span class="brand">FILTEC</span>
+          <span class="tagline">Polyplast Pvt Ltd</span>
+        </div>
         <button class="drawer-close" id="drawerClose">
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
-      <nav class="drawer-nav">
-        <a href="index.html" class="drawer-link">Home</a>
-        <a href="about.html" class="drawer-link">About Us</a>
-        <a href="why-us.html" class="drawer-link">Why Us</a>
-        <a href="products.html" class="drawer-link">Products</a>
-        <a href="process.html" class="drawer-link">Manufacturing</a>
-        <a href="contact.html" class="drawer-link active">Contact & Distributor</a>
-      </nav>
+      <div class="drawer-nav-section">
+        <span class="drawer-nav-label">Navigation</span>
+        <a href="index.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a href="about.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">info</span>
+          About Us
+        </a>
+        <a href="why-us.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">verified</span>
+          Why Us
+        </a>
+        <a href="products.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">inventory_2</span>
+          Products
+        </a>
+        <a href="process.html" class="drawer-link">
+          <span class="nav-icon material-symbols-outlined">precision_manufacturing</span>
+          Manufacturing
+        </a>
+        <a href="contact.html" class="drawer-link active">
+          <span class="nav-icon material-symbols-outlined">call</span>
+          Contact
+        </a>
+        <a href="partner.html" class="drawer-link drawer-partner-btn">
+          <span class="nav-icon material-symbols-outlined">handshake</span>
+          Become Partner
+        </a>
+      </div>
+      <div class="drawer-footer-info">
+        <div class="contact-line">
+          <span class="material-symbols-outlined">call</span>
+          <span>+91 9437505814</span>
+        </div>
+        <div class="contact-line">
+          <span class="material-symbols-outlined">mail</span>
+          <span>care@filtec.in</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -109,12 +149,12 @@
     <!-- Contact Hero -->
     <section class="hero hero-sm">
       <div class="hero-overlay" style="background: rgba(27, 42, 74, 0.85);"></div>
-      <img src="images/hero_home.png" alt="B2B Piping Contact Support" class="hero-bg">
+      <img src="images/hero_home.png" alt="Contact FILTEC Polyplast" class="hero-bg">
       <div class="container" style="position: relative; z-index: 2;">
         <div class="hero-content reveal">
-          <span class="label-bold hero-tag">Partner Networks</span>
-          <h1 class="display-lg hero-title" style="font-size: 2.75rem;">Distributor &amp; Sales Desk</h1>
-          <p class="body-lg hero-desc">Submit your regional dealership applications, request wholesale pricing files, or reach our Bhubaneswar office.</p>
+          <span class="label-bold hero-tag">Get In Touch</span>
+          <h1 class="display-lg hero-title" style="font-size: 2.75rem;">Contact Our Sales Team</h1>
+          <p class="body-lg hero-desc">Have a question about our products? Need a custom quote or technical support? Reach out to our Bhubaneswar office — we're here to help.</p>
         </div>
       </div>
     </section>
@@ -171,8 +211,8 @@
 
         <!-- Form column -->
         <div class="contact-form-box reveal delay-1">
-          <h3 class="headline-md" style="margin-bottom: 8px; color: var(--color-text-navy);">B2B Inquiry Form</h3>
-          <p class="body-md" style="margin-bottom: 24px; color: var(--color-text-slate);">Please complete the fields below. A sales executive will review your submission.</p>
+          <h3 class="headline-md" style="margin-bottom: 8px; color: var(--color-text-navy);">Contact Inquiry Form</h3>
+          <p class="body-md" style="margin-bottom: 24px; color: var(--color-text-slate);">Please complete the fields below. A sales executive will review your submission and respond promptly.</p>
           
           <form id="contactPageForm">
             <div class="form-group">
@@ -199,60 +239,32 @@
               <div class="form-group" style="margin-bottom: 0;">
                 <label class="form-label" for="inquiryType">Inquiry Purpose</label>
                 <select class="form-control" id="inquiryType" required style="height: 47px;">
-                  <option value="distributor">Become a Regional Distributor</option>
-                  <option value="quote">Request Sizing Quote</option>
-                  <option value="general">Technical Sourcing Query</option>
+                  <option value="quote">Request Product Quote</option>
+                  <option value="technical">Technical Support Query</option>
+                  <option value="sizing">Sizing / Specifications Help</option>
+                  <option value="general">General Inquiry</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="contactMessage">Message / Sizing Details</label>
-              <textarea class="form-control" id="contactMessage" required placeholder="Specify target product dimensions (uPVC, PVC, CPVC), estimated volumes, or your geographical territory interest..."></textarea>
+              <label class="form-label" for="contactMessage">Your Message</label>
+              <textarea class="form-control" id="contactMessage" required placeholder="Describe your requirements — product dimensions, estimated quantities, project details, or any questions..."></textarea>
             </div>
 
-            <button class="btn btn-primary w-full" type="submit" style="margin-top: 16px; padding: 14px;">Submit Inquiry</button>
+            <button class="btn btn-primary w-full" type="submit" style="margin-top: 16px; padding: 14px;">Send Message via WhatsApp</button>
           </form>
+
+          <div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+            <p class="body-md" style="color: var(--color-text-slate); margin-bottom: 8px;">Looking to become a distributor?</p>
+            <a href="partner.html" class="btn btn-secondary" style="padding: 10px 24px;">Apply as Partner →</a>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Distributor Benefits -->
-    <section class="section-padding bg-light" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="label-bold text-primary">Dealer Benefits</span>
-          <h2 class="headline-lg" style="margin-top: 8px;">Why Partner with FILTEC</h2>
-        </div>
 
-        <div class="grid grid-3">
-          <div class="reveal" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); padding: 32px; border-radius: var(--radius-default);">
-            <div style="width: 48px; height: 48px; background-color: rgba(227, 39, 38, 0.08); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-primary-container); font-size: 1.5rem; margin-bottom: 20px;">
-              <span class="material-symbols-outlined">map</span>
-            </div>
-            <h4 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy);">Exclusive Territory Rights</h4>
-            <p class="body-md" style="font-size: 0.9375rem; color: var(--color-text-slate);">We secure your local sales region, routing all local inquiries and project leads in your state directly to your dealership.</p>
-          </div>
-
-          <div class="reveal delay-1" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); padding: 32px; border-radius: var(--radius-default);">
-            <div style="width: 48px; height: 48px; background-color: rgba(227, 39, 38, 0.08); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-primary-container); font-size: 1.5rem; margin-bottom: 20px;">
-              <span class="material-symbols-outlined">percent</span>
-            </div>
-            <h4 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy);">Competitive Trade Margins</h4>
-            <p class="body-md" style="font-size: 0.9375rem; color: var(--color-text-slate);">Excellent commercial pricing schemes and credit schedules designed to optimize cash flow and reward consistent annual volumes.</p>
-          </div>
-
-          <div class="reveal delay-2" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); padding: 32px; border-radius: var(--radius-default);">
-            <div style="width: 48px; height: 48px; background-color: rgba(227, 39, 38, 0.08); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-primary-container); font-size: 1.5rem; margin-bottom: 20px;">
-              <span class="material-symbols-outlined">campaign</span>
-            </div>
-            <h4 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy);">Collateral &amp; Brand Assets</h4>
-            <p class="body-md" style="font-size: 0.9375rem; color: var(--color-text-slate);">We supply physical catalog booklets, samples crates, certification documents, and digital graphics assets to support your sales teams.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- FAQ Accordion -->
     <section id="faq" class="section-padding bg-lowest">
@@ -340,7 +352,7 @@
       <div class="footer-col">
         <h4 class="label-bold">Distributors</h4>
         <ul class="footer-links">
-          <li><a href="contact.html">Become a Partner</a></li>
+          <li><a href="partner.html">Become a Partner</a></li>
           <li><a href="contact.html#faq">FAQs</a></li>
           <li><a href="about.html#certifications">Certifications</a></li>
         </ul>

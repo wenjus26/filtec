@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Catalog & Technical Specs | FILTEC Polyplast</title>
-  <meta name="description" content="Detailed technical specifications of FILTEC Polyplast HDPE, PVC, PPR pipes and fittings. Standard dimensions, thickness tables and pressure ratings.">
+  <meta name="description" content="Detailed technical specifications of FILTEC Polyplast uPVC, PVC, CPVC pipes and fittings. Standard dimensions, thickness tables and pressure ratings.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -16,16 +16,16 @@
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Filtec Polyplast B2B Piping Catalog",
-    "description": "Premium industrial polymer piping systems, including HDPE, PVC, PPR pipes and fittings compliant with BIS standards.",
+    "description": "Premium industrial polymer piping systems, including uPVC, PVC, CPVC pipes and fittings compliant with BIS standards.",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "item": {
           "@type": "Product",
-          "name": "High Density Polyethylene (HDPE) Pipes",
+          "name": "High Density Polyethylene (uPVC) Pipes",
           "description": "Flexible, lightweight pipelines designed for water networks, municipal sewage, chemical transport, and sub-zero temperature environments. IS 4984 compliant.",
-          "image": "https://www.filtecpolyplast.com/images/product_hdpe.png",
+          "image": "https://www.filtec.in/images/product_upvc.png",
           "brand": {
             "@type": "Brand",
             "name": "Filtec Polyplast"
@@ -39,7 +39,7 @@
           "@type": "Product",
           "name": "Polyvinyl Chloride (PVC) Pipes",
           "description": "Rigid, highly cost-effective piping suitable for agricultural irrigation grids, pressure mains, potable water logistics, and building ventilation drainage setups. IS 4985 compliant.",
-          "image": "https://www.filtecpolyplast.com/images/product_pvc.png",
+          "image": "https://www.filtec.in/images/product_pvc.png",
           "brand": {
             "@type": "Brand",
             "name": "Filtec Polyplast"
@@ -51,9 +51,9 @@
         "position": 3,
         "item": {
           "@type": "Product",
-          "name": "Polypropylene Random (PPR) Pipes",
+          "name": "Polypropylene Random (CPVC) Pipes",
           "description": "Co-polymer systems engineered for hot & cold water plumbing, industrial central heating layouts, and air conditioning pipes. IS 15801 compliant.",
-          "image": "https://www.filtecpolyplast.com/images/product_ppr.png",
+          "image": "https://www.filtec.in/images/product_cpvc.png",
           "brand": {
             "@type": "Brand",
             "name": "Filtec Polyplast"
@@ -67,7 +67,7 @@
           "@type": "Product",
           "name": "Industrial Pipe Joints & Fittings",
           "description": "Precision-molded elbow bends, equal tees, reducers, coupler sockets, end caps, and heavy-duty control valves. IS 7834 Compliant.",
-          "image": "https://www.filtecpolyplast.com/images/product_fittings.png",
+          "image": "https://www.filtec.in/images/product_fittings.png",
           "brand": {
             "@type": "Brand",
             "name": "Filtec Polyplast"
@@ -150,26 +150,26 @@
         <!-- Tabs Navigation -->
         <div class="tabs-container">
           <button class="tab-btn active" onclick="filterProducts('all', this)">Show All</button>
-          <button class="tab-btn" onclick="filterProducts('hdpe', this)">HDPE Pipes</button>
+          <button class="tab-btn" onclick="filterProducts('upvc', this)">uPVC Pipes</button>
           <button class="tab-btn" onclick="filterProducts('pvc', this)">PVC Pipes</button>
-          <button class="tab-btn" onclick="filterProducts('ppr', this)">PPR Pipes</button>
+          <button class="tab-btn" onclick="filterProducts('cpvc', this)">CPVC Pipes</button>
           <button class="tab-btn" onclick="filterProducts('fittings', this)">Pipe Fittings</button>
         </div>
 
         <!-- Product Grid -->
         <div class="grid grid-2" style="margin-top: 48px; margin-bottom: 80px;">
-          <!-- HDPE Pipes -->
-          <div class="card-product card-horizontal" data-category="hdpe">
+          <!-- uPVC Pipes -->
+          <div class="card-product card-horizontal" data-category="upvc">
             <div class="card-img-wrapper">
-              <img src="images/product_hdpe.png" alt="HDPE Piping Systems" class="card-img">
+              <img src="images/product_upvc.png" alt="uPVC Piping Systems" class="card-img">
             </div>
             <div class="card-body">
               <span class="label-bold text-primary" style="font-size: 0.75rem;">IS 4984 compliant</span>
-              <h3 class="headline-md card-title" style="margin-top: 4px;">High Density Polyethylene (HDPE)</h3>
+              <h3 class="headline-md card-title" style="margin-top: 4px;">High Density Polyethylene (uPVC)</h3>
               <p class="body-md card-desc" style="font-size: 0.9375rem;">Flexible, lightweight pipelines designed for water networks, municipal sewage, chemical transport, and sub-zero temperature environments. Resistant to stress cracking and soil shift.</p>
               <div class="flex gap-md" style="margin-top: auto;">
-                <button class="btn btn-primary" onclick="openInquiryModal('HDPE Pipes')">Request Quote</button>
-                <a href="#hdpe-table" class="btn btn-tertiary">Sizing Table</a>
+                <button class="btn btn-primary" onclick="openInquiryModal('uPVC Pipes')">Request Quote</button>
+                <a href="#upvc-table" class="btn btn-tertiary">Sizing Table</a>
               </div>
             </div>
           </div>
@@ -190,18 +190,18 @@
             </div>
           </div>
 
-          <!-- PPR Pipes -->
-          <div class="card-product card-horizontal" data-category="ppr">
+          <!-- CPVC Pipes -->
+          <div class="card-product card-horizontal" data-category="cpvc">
             <div class="card-img-wrapper">
-              <img src="images/product_ppr.png" alt="PPR Piping Systems" class="card-img">
+              <img src="images/product_cpvc.png" alt="CPVC Piping Systems" class="card-img">
             </div>
             <div class="card-body">
               <span class="label-bold text-primary" style="font-size: 0.75rem;">IS 15801 compliant</span>
-              <h3 class="headline-md card-title" style="margin-top: 4px;">Polypropylene Random (PPR)</h3>
+              <h3 class="headline-md card-title" style="margin-top: 4px;">Polypropylene Random (CPVC)</h3>
               <p class="body-md card-desc" style="font-size: 0.9375rem;">Co-polymer systems engineered for hot &amp; cold water plumbing, industrial central heating layouts, and air conditioning pipes. Highly thermal stable and jointed through fusion welding.</p>
               <div class="flex gap-md" style="margin-top: auto;">
-                <button class="btn btn-primary" onclick="openInquiryModal('PPR Pipes')">Request Quote</button>
-                <a href="#ppr-table" class="btn btn-tertiary">Sizing Table</a>
+                <button class="btn btn-primary" onclick="openInquiryModal('CPVC Pipes')">Request Quote</button>
+                <a href="#cpvc-table" class="btn btn-tertiary">Sizing Table</a>
               </div>
             </div>
           </div>
@@ -235,9 +235,9 @@
           <h2 class="headline-lg" style="margin-top: 8px;">Dimensional Specification Tables</h2>
         </div>
 
-        <!-- HDPE Sizing Table -->
-        <div id="hdpe-table" style="margin-bottom: 64px;">
-          <h3 class="headline-md text-navy" style="margin-bottom: 16px;">HDPE Sizing Chart (IS 4984)</h3>
+        <!-- uPVC Sizing Table -->
+        <div id="upvc-table" style="margin-bottom: 64px;">
+          <h3 class="headline-md text-navy" style="margin-bottom: 16px;">uPVC Sizing Chart (IS 4984)</h3>
           <p class="body-md" style="margin-bottom: 16px; color: var(--color-text-slate);">Standard SDR ratios, pressure ratings, and wall thickness configurations. Custom lengths are available upon request.</p>
           <div class="table-wrapper" style="border-radius: var(--radius-default); overflow: hidden; margin-top: 0;">
             <table class="table-industrial">
@@ -368,9 +368,9 @@
           </div>
         </div>
 
-        <!-- PPR Sizing Table -->
-        <div id="ppr-table" style="margin-bottom: 64px;">
-          <h3 class="headline-md text-navy" style="margin-bottom: 16px;">PPR Sizing Chart (IS 15801)</h3>
+        <!-- CPVC Sizing Table -->
+        <div id="cpvc-table" style="margin-bottom: 64px;">
+          <h3 class="headline-md text-navy" style="margin-bottom: 16px;">CPVC Sizing Chart (IS 15801)</h3>
           <p class="body-md" style="margin-bottom: 16px; color: var(--color-text-slate);">Standard SDR and PN pressure series for hot and cold plumbing connections.</p>
           <div class="table-wrapper" style="border-radius: var(--radius-default); overflow: hidden; margin-top: 0;">
             <table class="table-industrial">
@@ -523,12 +523,12 @@
         <h4 class="label-bold">Contact Details</h4>
         <p style="margin-bottom: 8px;">Unit No. 12, Bhubaneswar Industrial Estate</p>
         <p style="margin-bottom: 8px;">Odisha, India - 754211</p>
-        <p style="margin-bottom: 8px;">Email: info@filtecpolyplast.com</p>
-        <p>Phone: +91 6727 220011</p>
+        <p style="margin-bottom: 8px;">Email: care@filtec.in</p>
+        <p>Phone: +91 9437505814</p>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 FILTEC Polyplast. All Rights Reserved. CIN: U25209GJ2012PTC071234</p>
+      <p>© 2026 FILTEC Polyplast. All Rights Reserved. CIN: U22208OD2025PTC0155</p>
       <p>Built for B2B Industrial Excellence</p>
     </div>
   </footer>

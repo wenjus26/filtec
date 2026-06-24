@@ -188,7 +188,7 @@
     <!-- Products Hero -->
     <section class="hero hero-sm">
       <div class="hero-overlay" style="background: rgba(27, 42, 74, 0.85);"></div>
-      <img src="images/hero_home.png" alt="Industrial Polymer Pipes" class="hero-bg">
+      <img src="images/all_products_assortment.jpeg" alt="Industrial Polymer Pipes" class="hero-bg">
       <div class="container" style="position: relative; z-index: 2;">
         <div class="hero-content reveal">
           <span class="label-bold hero-tag">B2B Sizing & Specs</span>
@@ -208,6 +208,7 @@
           <button class="tab-btn" onclick="filterProducts('upvc', this)">uPVC Pipes</button>
           <button class="tab-btn" onclick="filterProducts('pvc', this)">PVC Pipes</button>
           <button class="tab-btn" onclick="filterProducts('cpvc', this)">CPVC Pipes</button>
+          <button class="tab-btn" onclick="filterProducts('swr', this)">SWR Pipes</button>
           <button class="tab-btn" onclick="filterProducts('fittings', this)">Pipe Fittings</button>
         </div>
 
@@ -216,7 +217,7 @@
           <!-- uPVC Pipes -->
           <div class="card-product card-horizontal reveal" data-category="upvc">
             <div class="card-img-wrapper">
-              <img src="images/product_upvc.png" alt="uPVC Piping Systems" class="card-img">
+              <img src="images/products/upvc_pipes.png" alt="uPVC Piping Systems" class="card-img">
             </div>
             <div class="card-body">
               <span class="label-bold text-primary" style="font-size: 0.75rem;">IS 4984 compliant</span>
@@ -232,7 +233,7 @@
           <!-- PVC Pipes -->
           <div class="card-product card-horizontal reveal delay-1" data-category="pvc">
             <div class="card-img-wrapper">
-              <img src="images/product_pvc.png" alt="PVC Piping Systems" class="card-img">
+              <img src="images/products/pvc_pipes.png" alt="PVC Piping Systems" class="card-img">
             </div>
             <div class="card-body">
               <span class="label-bold text-primary" style="font-size: 0.75rem;">IS 4985 compliant</span>
@@ -248,7 +249,7 @@
           <!-- CPVC Pipes -->
           <div class="card-product card-horizontal reveal delay-2" data-category="cpvc">
             <div class="card-img-wrapper">
-              <img src="images/product_cpvc.png" alt="CPVC Piping Systems" class="card-img">
+              <img src="images/products/cpvc_pipes.png" alt="CPVC Piping Systems" class="card-img">
             </div>
             <div class="card-body">
               <span class="label-bold text-primary" style="font-size: 0.75rem;">IS 15801 compliant</span>
@@ -264,7 +265,7 @@
           <!-- Fittings -->
           <div class="card-product card-horizontal reveal delay-3" data-category="fittings">
             <div class="card-img-wrapper">
-              <img src="images/product_fittings.png" alt="Polymer Fittings" class="card-img">
+              <img src="images/products/upvc_cvpc_valve.png" alt="Polymer Fittings" class="card-img">
             </div>
             <div class="card-body">
               <span class="label-bold text-primary" style="font-size: 0.75rem;">IS 7834 Compliant</span>
@@ -272,6 +273,22 @@
               <p class="body-md card-desc" style="font-size: 0.9375rem;">Precision-molded elbow bends, equal tees, reducers, coupler sockets, end caps, and heavy-duty control valves. Designed to guarantee full joint pressure rating continuity.</p>
               <div class="flex gap-md" style="margin-top: auto;">
                 <button class="btn btn-primary" onclick="openInquiryModal('Industrial Fittings')">Request Quote</button>
+                <a href="#fittings-specs" class="btn btn-tertiary">Sizing Table</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SWR Pipes -->
+          <div class="card-product card-horizontal reveal delay-4" data-category="swr">
+            <div class="card-img-wrapper">
+              <img src="images/product_swr.jpeg" alt="SWR Piping Systems" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.75rem;">IS 13592 compliant</span>
+              <h3 class="headline-md card-title" style="margin-top: 4px;">Soil, Waste and Rainwater (SWR)</h3>
+              <p class="body-md card-desc" style="font-size: 0.9375rem;">Robust grey pipes and fittings designed for efficient drainage and wastewater management in residential and commercial complexes.</p>
+              <div class="flex gap-md" style="margin-top: auto;">
+                <button class="btn btn-primary" onclick="openInquiryModal('SWR Pipes')">Request Quote</button>
                 <a href="#fittings-specs" class="btn btn-tertiary">Sizing Table</a>
               </div>
             </div>
@@ -541,11 +558,16 @@
 
     <!-- Download Catalog CTA -->
     <section class="section-padding bg-lowest">
-      <div class="container text-center reveal">
-        <span class="material-symbols-outlined text-primary" style="font-size: 3rem; margin-bottom: 16px;">download_for_offline</span>
-        <h2 class="headline-lg" style="margin-bottom: 12px;">Full PDF Sizing catalog</h2>
-        <p class="body-md" style="max-width: 600px; margin: 0 auto 32px auto; color: var(--color-text-slate);">Includes detailed CAD drawings, packaging ratios, physical testing constants and guidelines for underground piping installation.</p>
-        <button class="btn btn-secondary" onclick="alert('Downloading catalog files. (Mock download link initiated)')">Download Technical Catalog</button>
+      <div class="container grid grid-2 align-center gap-lg reveal">
+        <div>
+          <img src="images/banner_premium_piping.jpeg" alt="Premium Piping Assortment" style="border-radius: var(--radius-lg); box-shadow: 0 15px 30px rgba(27, 42, 74, 0.08); width: 100%; height: auto; border: 1px solid var(--color-border);">
+        </div>
+        <div class="text-center">
+          <span class="material-symbols-outlined text-primary" style="font-size: 3rem; margin-bottom: 16px;">download_for_offline</span>
+          <h2 class="headline-lg" style="margin-bottom: 12px;">Full PDF Sizing catalog</h2>
+          <p class="body-md" style="margin: 0 auto 32px auto; color: var(--color-text-slate);">Includes detailed CAD drawings, packaging ratios, physical testing constants and guidelines for underground piping installation.</p>
+          <a href="https://drive.google.com/file/d/1FYIWOf1C1D3GtVpjiKzBV_HQ6pRl0XXV/view" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Technical Catalog</a>
+        </div>
       </div>
     </section>
   </main>

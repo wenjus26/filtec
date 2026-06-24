@@ -1542,42 +1542,49 @@ footer {
   
   .cert-container {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
-    gap: var(--stack-lg);
+    gap: 32px;
   }
   
   .cert-logos {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 12px;
     width: 100%;
   }
   
   .cert-logos span {
-    border-left: none !important;
-    padding-left: 0 !important;
-    font-size: 0.8125rem;
-    background-color: var(--color-surface-container);
-    padding: 6px 12px !important;
-    border-radius: var(--radius-sm);
+    border: none !important;
+    font-size: 0.875rem;
+    background-color: rgba(227, 39, 38, 0.05);
+    color: var(--color-primary-container);
+    padding: 12px 24px !important;
+    border-radius: var(--radius-full);
     text-align: center;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
   }
 
   .cert-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--stack-md);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     width: 100%;
   }
   
   .stat-item {
-    border-left: none !important;
-    border-top: 2px solid var(--color-primary);
-    padding-left: 0 !important;
-    padding-top: 8px;
+    border: 1px solid var(--color-border) !important;
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 24px !important;
     text-align: center;
+    box-shadow: 0 8px 24px rgba(27, 42, 74, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   .footer-grid {
@@ -1601,20 +1608,6 @@ footer {
   }
   .nav-container {
     height: 64px;
-  }
-  .cert-stats {
-    grid-template-columns: 1fr;
-    gap: var(--stack-md);
-    width: 100%;
-  }
-  .stat-item {
-    border-top: none !important;
-    border-left: 2px solid var(--color-primary) !important;
-    padding-left: 12px !important;
-    padding-top: 0 !important;
-    text-align: left;
-    max-width: 200px;
-    margin: 0 auto;
   }
   .table-industrial th, .table-industrial td {
     padding: 10px 12px !important;

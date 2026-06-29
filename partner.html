@@ -549,29 +549,8 @@
               </div>
             </div>
 
-            <!-- Section 3: Preferred Territory & Products -->
-            <p class="form-section-title" style="margin-top: 32px;">3. Preferred Territory & Products</p>
-            <div class="territory-map-box" style="margin-bottom: 20px;">
-              <span class="material-symbols-outlined">info</span>
-              <p class="body-md" style="color: var(--color-text-slate); margin: 0;">We typically assign exclusive territories at the district or state level depending on market potential.</p>
-            </div>
-            
-            <div class="form-grid-2" style="margin-bottom: 20px;">
-              <div class="form-group" style="margin-bottom:0">
-                <label class="form-label" for="partnerTerritory">Preferred Territory (District / Region) *</label>
-                <input class="form-control" type="text" id="partnerTerritory" name="territory" required placeholder="e.g., Cuttack District, North Odisha">
-              </div>
-              <div class="form-group" style="margin-bottom:0">
-                <label class="form-label" for="partnerVolume">Expected Monthly Volume *</label>
-                <select class="form-control" id="partnerVolume" name="expectedVolume" required style="height: 47px;">
-                  <option value="">Select Volume Range</option>
-                  <option value="Under 1 Lakh">Under ₹1 Lakh</option>
-                  <option value="1 - 5 Lakhs">₹1 Lakh - ₹5 Lakhs</option>
-                  <option value="5 - 10 Lakhs">₹5 Lakhs - ₹10 Lakhs</option>
-                  <option value="Above 10 Lakhs">Above ₹10 Lakhs</option>
-                </select>
-              </div>
-            </div>
+            <!-- Section 3: Product Interest -->
+            <p class="form-section-title" style="margin-top: 32px;">3. Product Interest</p>
 
             <div class="form-group" style="margin-bottom: 24px;">
               <label class="form-label">Product Lines of Interest * (Select all that apply)</label>
@@ -727,8 +706,6 @@
       const city = document.getElementById('partnerCity').value.trim();
       const state = document.getElementById('partnerState').value.trim();
       const years = document.getElementById('partnerYearsOp').options[document.getElementById('partnerYearsOp').selectedIndex].text;
-      const territory = document.getElementById('partnerTerritory').value.trim();
-      const volume = document.getElementById('partnerVolume').options[document.getElementById('partnerVolume').selectedIndex].text;
       const products = checkedProductLines.join(', ');
       const brands = document.getElementById('partnerCurrentBrands').value.trim() || 'None';
       const warehouse = document.getElementById('partnerWarehouse').options[document.getElementById('partnerWarehouse').selectedIndex].text;
@@ -745,9 +722,7 @@
         `🏭 Type: ${businessType}\n` +
         `📍 Location: ${city}, ${state}\n` +
         `📅 Experience: ${years}\n\n` +
-        `*Territory & Products*\n` +
-        `🗺️ Territory: ${territory}\n` +
-        `📦 Volume: ${volume}\n` +
+        `*Products*\n` +
         `🔧 Products: ${products}\n\n` +
         `*Additional*\n` +
         `🏷️ Current Brands: ${brands}\n` +

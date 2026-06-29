@@ -220,30 +220,45 @@
 
         <div class="grid grid-3">
           <!-- Achievement 1 -->
-          <div class="reveal" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 32px; text-align: center;">
-            <div style="width: 64px; height: 64px; background-color: rgba(227, 39, 38, 0.08); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-primary-container); font-size: 2rem; margin: 0 auto 20px auto;">
-              <span class="material-symbols-outlined">military_tech</span>
+          <div class="reveal" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-default); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 20px rgba(27, 42, 74, 0.08)'; this.querySelector('.zoom-hover').style.transform='scale(1.04)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" onclick="openLightbox('images/achievements/startup_india.png', 'Startup India Certificate of Recognition')">
+            <div style="width: 100%; height: 220px; overflow: hidden; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-low); position: relative;">
+              <img class="zoom-hover" src="images/achievements/startup_india.png" alt="Startup India Certificate of Recognition" style="width: 100%; height: 100%; object-fit: contain; padding: 12px; transition: transform 0.3s ease;">
+              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(27, 42, 74, 0.7); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: #fff; backdrop-filter: blur(4px);">
+                <span class="material-symbols-outlined" style="font-size: 1.25rem;">zoom_in</span>
+              </div>
             </div>
-            <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy);">Start-up India Recognition</h3>
-            <p class="body-md" style="font-size: 0.9375rem; color: var(--color-text-slate);">Recognized and certified under the central Start-up India initiative for manufacturing innovation and infrastructure contribution.</p>
+            <div style="padding: 24px; text-align: left; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 8px; color: var(--color-text-navy); font-weight: 700;">Start-up India Recognition</h3>
+              <p class="body-md" style="font-size: 0.9rem; color: var(--color-text-slate); line-height: 1.5; margin: 0;">Recognized and certified under the central Start-up India initiative for manufacturing innovation and infrastructure contribution.</p>
+            </div>
           </div>
 
           <!-- Achievement 2 -->
-          <div class="reveal delay-1" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 32px; text-align: center;">
-            <div style="width: 64px; height: 64px; background-color: rgba(227, 39, 38, 0.08); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-primary-container); font-size: 2rem; margin: 0 auto 20px auto;">
-              <span class="material-symbols-outlined">workspace_premium</span>
+          <div class="reveal delay-1" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-default); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 20px rgba(27, 42, 74, 0.08)'; this.querySelector('.zoom-hover').style.transform='scale(1.04)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" onclick="openLightbox('images/achievements/best_entrepreneur.png', 'Best Entrepreneur Award from Public Right Association')">
+            <div style="width: 100%; height: 220px; overflow: hidden; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-low); position: relative;">
+              <img class="zoom-hover" src="images/achievements/best_entrepreneur.png" alt="Best Entrepreneur Award Ceremony" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(27, 42, 74, 0.7); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: #fff; backdrop-filter: blur(4px);">
+                <span class="material-symbols-outlined" style="font-size: 1.25rem;">zoom_in</span>
+              </div>
             </div>
-            <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy);">Best Entrepreneur Award</h3>
-            <p class="body-md" style="font-size: 0.9375rem; color: var(--color-text-slate);">Awarded the prestigious Best Entrepreneur Award by the Public Right Association for excellence in B2B business values.</p>
+            <div style="padding: 24px; text-align: left; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 8px; color: var(--color-text-navy); font-weight: 700;">Best Entrepreneur Award</h3>
+              <p class="body-md" style="font-size: 0.9rem; color: var(--color-text-slate); line-height: 1.5; margin: 0;">Awarded the prestigious Best Entrepreneur Award by the Public Right Association for excellence in B2B business values.</p>
+            </div>
           </div>
 
           <!-- Achievement 3 -->
-          <div class="reveal delay-2" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 32px; text-align: center;">
-            <div style="width: 64px; height: 64px; background-color: rgba(227, 39, 38, 0.08); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: var(--color-primary-container); font-size: 2rem; margin: 0 auto 20px auto;">
-              <span class="material-symbols-outlined">emoji_events</span>
+          <div class="reveal delay-2" style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-default); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 20px rgba(27, 42, 74, 0.08)'; this.querySelector('.zoom-hover').style.transform='scale(1.04)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" onclick="openLightbox('images/achievements/prachi_mahotshav.png', 'FILTEC Awarded at State level Prachi Mahotshav')">
+            <div style="width: 100%; height: 220px; overflow: hidden; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-low); position: relative;">
+              <img class="zoom-hover" src="images/achievements/prachi_mahotshav.png" alt="FILTEC Awarded at State level Prachi Mahotshav" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(27, 42, 74, 0.7); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: #fff; backdrop-filter: blur(4px);">
+                <span class="material-symbols-outlined" style="font-size: 1.25rem;">zoom_in</span>
+              </div>
             </div>
-            <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy);">State Level Award</h3>
-            <p class="body-md" style="font-size: 0.9375rem; color: var(--color-text-slate);">Officially awarded and recognized at the State level Prachi Mahotshav for sustaie manufacturing practices.</p>
+            <div style="padding: 24px; text-align: left; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 8px; color: var(--color-text-navy); font-weight: 700;">State Level Award</h3>
+              <p class="body-md" style="font-size: 0.9rem; color: var(--color-text-slate); line-height: 1.5; margin: 0;">Officially awarded and recognized at the State level Prachi Mahotshav for sustainable manufacturing practices.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -259,24 +274,45 @@
 
         <div class="grid grid-3">
           <!-- Future Plan 1 -->
-          <div class="strategic-vision-box reveal" style="padding: 32px;">
-            <span class="material-symbols-outlined text-primary" style="font-size: 2.25rem; margin-bottom: 16px;">splitscreen</span>
-            <h3 class="headline-md" style="font-size: 1.25rem; margin-bottom: 12px; color: var(--color-text-navy);">01. Garden Pipe Extrusion Line</h3>
-            <p class="body-md" style="color: var(--color-text-slate);">Adding specialized extrusion lines for flexible transparent, opaque, zebra, and braided garden hoses to capture residential and landscaping demands.</p>
+          <div class="reveal" style="background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 20px rgba(27, 42, 74, 0.08)'; this.querySelector('.zoom-hover').style.transform='scale(1.04)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" onclick="openLightbox('images/roadmap/garden_pipe.png', 'Garden Pipe Production Line')">
+            <div style="width: 100%; height: 220px; overflow: hidden; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-lowest); position: relative;">
+              <img class="zoom-hover" src="images/roadmap/garden_pipe.png" alt="Garden Pipe Production Line" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(27, 42, 74, 0.7); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: #fff; backdrop-filter: blur(4px);">
+                <span class="material-symbols-outlined" style="font-size: 1.25rem;">zoom_in</span>
+              </div>
+            </div>
+            <div style="padding: 24px; text-align: left; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy); font-weight: 700;">01. Garden Pipe Extrusion Line</h3>
+              <p class="body-md" style="font-size: 0.9rem; color: var(--color-text-slate); line-height: 1.5; margin: 0;">Adding a garden pipe production line to produce transparent garden pipe, OPAQUE Pipe, Zebra pipe and Braided pipe to cater the market demand and strengthen FILTEC product portfolio.</p>
+            </div>
           </div>
 
           <!-- Future Plan 2 -->
-          <div class="strategic-vision-box reveal delay-1" style="padding: 32px;">
-            <span class="material-symbols-outlined text-primary" style="font-size: 2.25rem; margin-bottom: 16px;">filter_alt_off</span>
-            <h3 class="headline-md" style="font-size: 1.25rem; margin-bottom: 12px; color: var(--color-text-navy);">02. Suction Hose Production</h3>
-            <p class="body-md" style="color: var(--color-text-slate);">Deploying multi-sized suction hose production facilities to supply agricultural irrigation grids and industrial vacuum pump operators.</p>
+          <div class="reveal delay-1" style="background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 20px rgba(27, 42, 74, 0.08)'; this.querySelector('.zoom-hover').style.transform='scale(1.04)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" onclick="openLightbox('images/roadmap/suction_hose.png', 'Suction Hose Production Line')">
+            <div style="width: 100%; height: 220px; overflow: hidden; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-lowest); position: relative;">
+              <img class="zoom-hover" src="images/roadmap/suction_hose.png" alt="Suction Hose Production Line" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(27, 42, 74, 0.7); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: #fff; backdrop-filter: blur(4px);">
+                <span class="material-symbols-outlined" style="font-size: 1.25rem;">zoom_in</span>
+              </div>
+            </div>
+            <div style="padding: 24px; text-align: left; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy); font-weight: 700;">02. Suction Hose Production</h3>
+              <p class="body-md" style="font-size: 0.9rem; color: var(--color-text-slate); line-height: 1.5; margin: 0;">Adding a suction hose production line to produce various sizes of suction hose to cater the market demand and strengthen FILTEC product portfolio.</p>
+            </div>
           </div>
 
           <!-- Future Plan 3 -->
-          <div class="strategic-vision-box reveal delay-2" style="padding: 32px;">
-            <span class="material-symbols-outlined text-primary" style="font-size: 2.25rem; margin-bottom: 16px;">plumbing</span>
-            <h3 class="headline-md" style="font-size: 1.25rem; margin-bottom: 12px; color: var(--color-text-navy);">03. Borewell Casing R&amp;D</h3>
-            <p class="body-md" style="color: var(--color-text-slate);">Undertaking raw material composition R&amp;D and machine tooling modifications to launch heavy-duty borewell casing pipes for seasonal water table extractions.</p>
+          <div class="reveal delay-2" style="background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 20px rgba(27, 42, 74, 0.08)'; this.querySelector('.zoom-hover').style.transform='scale(1.04)';" onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" onclick="openLightbox('images/roadmap/borewell_casing.png', 'Borewell Casing Pipes')">
+            <div style="width: 100%; height: 220px; overflow: hidden; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; background-color: var(--color-surface-lowest); position: relative;">
+              <img class="zoom-hover" src="images/roadmap/borewell_casing.png" alt="Borewell Casing Pipes" style="width: 100%; height: 100%; object-fit: contain; padding: 12px; transition: transform 0.3s ease;">
+              <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(27, 42, 74, 0.7); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: #fff; backdrop-filter: blur(4px);">
+                <span class="material-symbols-outlined" style="font-size: 1.25rem;">zoom_in</span>
+              </div>
+            </div>
+            <div style="padding: 24px; text-align: left; display: flex; flex-direction: column; flex-grow: 1;">
+              <h3 class="headline-md" style="font-size: 1.125rem; margin-bottom: 12px; color: var(--color-text-navy); font-weight: 700;">03. Borewell Casing R&amp;D</h3>
+              <p class="body-md" style="font-size: 0.9rem; color: var(--color-text-slate); line-height: 1.5; margin: 0;">Material composition R&D, Machine modification and commence production of various sizes borewell casing pipe to cater the seasonal market demand and strengthen FILTEC product portfolio.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -333,10 +369,54 @@
     </div>
     <div class="container footer-bottom">
       <p>© 2026 FILTEC Polyplast. All Rights Reserved. CIN: U22208OD2025PTC0155</p>
-      <p>Built for B2B Industrial Excellence</p>
+      <p>Built for B2B Industrial Excellence | #Let's Solve Plumbing</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- Lightbox Modal for Certificates and Awards -->
+  <div id="lightboxModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(18, 28, 50, 0.9); align-items: center; justify-content: center; backdrop-filter: blur(8px); opacity: 0; transition: opacity 0.3s ease;">
+    <span style="position: absolute; top: 24px; right: 32px; color: #fff; font-size: 3rem; font-weight: 300; cursor: pointer; transition: color 0.2s; line-height: 1;" onclick="closeLightbox()">&times;</span>
+    <div style="max-width: 85%; max-height: 85%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <img id="lightboxImg" style="max-width: 100%; max-height: 72vh; border-radius: var(--radius-default); box-shadow: 0 20px 50px rgba(0,0,0,0.5); object-fit: contain; border: 1px solid rgba(255,255,255,0.1);">
+      <div id="lightboxCaption" style="margin-top: 20px; color: #fff; font-size: 1.25rem; font-weight: 600; font-family: inherit; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></div>
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const captionText = document.getElementById('lightboxCaption');
+      
+      img.src = src;
+      captionText.textContent = caption;
+      
+      modal.style.display = "flex";
+      setTimeout(() => {
+        modal.style.opacity = "1";
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.style.opacity = "0";
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 300);
+      document.body.style.overflow = '';
+    }
+
+    // Close on Escape or click outside
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+    
+    document.getElementById('lightboxModal').addEventListener('click', function(e) {
+      if (e.target === this || e.target.tagName === 'SPAN') closeLightbox();
+    });
+  </script>
 </body>
 </html>

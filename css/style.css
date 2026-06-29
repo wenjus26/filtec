@@ -1,19 +1,15 @@
-/* 
-   FILTEC Polyplast - Custom Design System (Industrial Excellence Core)
-   Vanilla CSS Implementation
-*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* --- Design Tokens --- */
 :root {
-  /* Color Palette */
+
   --color-primary: #bd0011;
   --color-primary-container: #e32726;
-  --color-secondary: #1B2A4A; /* Updated deep B2B Navy from DESIGN.md text */
+  --color-secondary: #1B2A4A; 
   --color-secondary-light: #4f5e81;
   --color-secondary-container: #c5d4fd;
-  
+
   --color-background: #fbf9f9;
   --color-surface: #fbf9f9;
   --color-surface-dim: #dbdad9;
@@ -23,19 +19,18 @@
   --color-surface-container: #efeded;
   --color-surface-high: #e9e8e7;
   --color-surface-highest: #e4e2e2;
-  
+
   --color-on-surface: #1b1c1c;
   --color-on-surface-variant: #5d3f3c;
   --color-text-navy: #121C32;
   --color-text-slate: #4A5568;
-  
+
   --color-border: #E0E0E0;
   --color-outline: #916f6b;
   --color-outline-variant: #e6bdb8;
-  
+
   --color-error: #ba1a1a;
-  
-  /* Spacing */
+
   --container-max: 1280px;
   --gutter: 24px;
   --margin-mobile: 16px;
@@ -44,20 +39,17 @@
   --stack-md: 16px;
   --stack-lg: 32px;
   --section-padding: 80px;
-  
-  /* Shapes / Border Radius */
-  --radius-sm: 0.125rem; /* 2px */
-  --radius-default: 0.25rem; /* 4px */
-  --radius-md: 0.375rem; /* 6px */
-  --radius-lg: 0.5rem; /* 8px */
-  --radius-xl: 0.75rem; /* 12px */
+
+  --radius-sm: 0.125rem; 
+  --radius-default: 0.25rem; 
+  --radius-md: 0.375rem; 
+  --radius-lg: 0.5rem; 
+  --radius-xl: 0.75rem; 
   --radius-full: 9999px;
-  
-  /* Grid & Columns */
+
   --grid-columns: 12;
 }
 
-/* --- Base Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -77,7 +69,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  padding-top: 80px; /* Offset for fixed header */
+  padding-top: 80px; 
 }
 
 img {
@@ -108,9 +100,8 @@ button, input, select, textarea {
   color: inherit;
 }
 
-/* --- Typography --- */
 .display-lg {
-  font-size: clamp(2rem, 5vw, 3rem); /* scales fluidly from 32px to 48px */
+  font-size: clamp(2rem, 5vw, 3rem); 
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -118,7 +109,7 @@ button, input, select, textarea {
 }
 
 .headline-lg {
-  font-size: clamp(1.5rem, 4vw, 2rem); /* scales fluidly from 24px to 32px */
+  font-size: clamp(1.5rem, 4vw, 2rem); 
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -126,42 +117,41 @@ button, input, select, textarea {
 }
 
 .headline-md {
-  font-size: clamp(1.2rem, 3vw, 1.5rem); /* scales fluidly from 19.2px to 24px */
+  font-size: clamp(1.2rem, 3vw, 1.5rem); 
   font-weight: 700;
   line-height: 1.4;
   color: var(--color-text-navy);
 }
 
 .body-lg {
-  font-size: clamp(1rem, 2vw, 1.125rem); /* scales fluidly from 16px to 18px */
+  font-size: clamp(1rem, 2vw, 1.125rem); 
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-text-slate);
 }
 
 .body-md {
-  font-size: 1rem; /* 16px standard */
+  font-size: 1rem; 
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-text-slate);
 }
 
 .label-bold {
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem; 
   font-weight: 600;
-  line-height: 1.25rem; /* 20px */
+  line-height: 1.25rem; 
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .caption {
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem; 
   font-weight: 500;
-  line-height: 1rem; /* 16px */
+  line-height: 1rem; 
   color: var(--color-text-slate);
 }
 
-/* --- Layout & Grid --- */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -197,7 +187,6 @@ button, input, select, textarea {
 .gap-md { gap: var(--stack-md); }
 .gap-lg { gap: var(--stack-lg); }
 
-/* --- Header / Navigation --- */
 header {
   position: fixed;
   top: 0;
@@ -262,7 +251,6 @@ header {
   background-color: var(--color-primary);
 }
 
-/* ===== Premium Hamburger Button ===== */
 .menu-toggle {
   display: none;
   background: none;
@@ -287,7 +275,6 @@ header {
   background: rgba(189, 0, 17, 0.08);
 }
 
-/* The animated bars wrapper */
 .hamburger-icon {
   width: 24px;
   height: 18px;
@@ -309,7 +296,6 @@ header {
   width: 100%;
 }
 
-/* Middle bar is slightly shorter for style */
 .hamburger-icon span:nth-child(2) {
   width: 75%;
   transition: transform 0.38s cubic-bezier(0.23, 1, 0.32, 1),
@@ -317,7 +303,6 @@ header {
               width 0.3s ease;
 }
 
-/* Active (open) state: morph to X */
 .menu-toggle.is-active .hamburger-icon span:nth-child(1) {
   transform: translateY(7.75px) rotate(45deg);
   width: 100%;
@@ -339,7 +324,6 @@ header {
   background: var(--color-primary-container);
 }
 
-/* ===== Premium Mobile Drawer ===== */
 .drawer {
   position: fixed;
   top: 0;
@@ -358,7 +342,6 @@ header {
   transition-delay: 0s;
 }
 
-/* Frosted dark backdrop */
 .drawer-backdrop {
   position: absolute;
   inset: 0;
@@ -373,7 +356,6 @@ header {
   opacity: 1;
 }
 
-/* Drawer panel */
 .drawer-content {
   position: absolute;
   top: 0;
@@ -389,7 +371,6 @@ header {
   overflow: hidden;
 }
 
-/* Decorative accent line */
 .drawer-content::before {
   content: '';
   position: absolute;
@@ -407,7 +388,6 @@ header {
   100% { background-position: -200% 0; }
 }
 
-/* Decorative glow blob */
 .drawer-content::after {
   content: '';
   position: absolute;
@@ -424,7 +404,6 @@ header {
   transform: translateX(0);
 }
 
-/* Staggered item reveal */
 .drawer.open .drawer-header,
 .drawer.open .drawer-nav-section,
 .drawer.open .drawer-footer-info {
@@ -440,7 +419,6 @@ header {
   to   { opacity: 1; transform: translateX(0); }
 }
 
-/* Header */
 .drawer-header {
   display: flex;
   justify-content: space-between;
@@ -471,7 +449,6 @@ header {
   text-transform: uppercase;
 }
 
-/* Premium close button */
 .drawer-close {
   width: 38px;
   height: 38px;
@@ -494,7 +471,6 @@ header {
   color: #fff;
 }
 
-/* Nav section */
 .drawer-nav-section {
   flex: 1;
   overflow-y: auto;
@@ -517,14 +493,12 @@ header {
   border-radius: 2px;
 }
 
-/* Old drawer-nav kept for compatibility */
 .drawer-nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-/* Nav item counter label */
 .drawer-nav-label {
   font-size: 0.6875rem;
   font-weight: 700;
@@ -596,7 +570,6 @@ header {
   border-radius: 0 3px 3px 0;
 }
 
-/* Partner CTA button inside drawer */
 .drawer-partner-btn {
   display: flex;
   align-items: center;
@@ -616,7 +589,7 @@ header {
   transform: translateY(-2px) !important;
   box-shadow: 0 10px 28px rgba(227,39,38,0.4) !important;
   filter: brightness(1.08);
-  background: rgba(0,0,0,0) !important; /* override */
+  background: rgba(0,0,0,0) !important; 
   background-image: linear-gradient(135deg, #e32726, #bd0011) !important;
 }
 
@@ -625,7 +598,6 @@ header {
   color: #fff !important;
 }
 
-/* Footer info strip */
 .drawer-footer-info {
   padding: 20px 24px;
   border-top: 1px solid rgba(255,255,255,0.07);
@@ -650,7 +622,6 @@ header {
   color: rgba(227,39,38,0.7);
 }
 
-/* --- Buttons --- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -702,7 +673,6 @@ header {
   transform: scale(0.98);
 }
 
-/* --- Hero Section --- */
 .hero {
   position: relative;
   min-height: 530px;
@@ -764,7 +734,6 @@ header {
   margin-bottom: var(--stack-lg);
 }
 
-/* --- Stats & Certification Strip --- */
 .cert-strip {
   background-color: var(--color-surface-low);
   border-bottom: 1px solid var(--color-border);
@@ -821,7 +790,6 @@ header {
   color: var(--color-text-slate);
 }
 
-/* --- Cards (Product & Features) --- */
 .card-product {
   background-color: var(--color-surface-lowest);
   border: 1px solid var(--color-border);
@@ -895,7 +863,6 @@ header {
   transform: translateX(4px);
 }
 
-/* Horizontal Cards (Desktop Row, Mobile Column) */
 .card-horizontal {
   flex-direction: row;
   align-items: stretch;
@@ -929,7 +896,6 @@ header {
   }
 }
 
-/* --- Features Grid --- */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -964,7 +930,6 @@ header {
   font-size: 1.5rem;
 }
 
-/* --- Industrial Tables --- */
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -1008,7 +973,6 @@ header {
   text-align: right;
 }
 
-/* --- Forms & Inputs --- */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -1043,7 +1007,6 @@ textarea.form-control {
   resize: vertical;
 }
 
-/* --- Footer --- */
 footer {
   background-color: var(--color-secondary);
   color: var(--color-surface-low);
@@ -1095,7 +1058,6 @@ footer {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* --- Interactive Timeline --- */
 .timeline {
   position: relative;
   padding: 40px 0;
@@ -1179,7 +1141,6 @@ footer {
   width: 45%;
 }
 
-/* --- Tabs & Filters --- */
 .tabs-container {
   display: flex;
   justify-content: center;
@@ -1215,7 +1176,6 @@ footer {
   border-color: var(--color-secondary);
 }
 
-/* --- Modals --- */
 .modal {
   position: fixed;
   inset: 0;
@@ -1282,7 +1242,6 @@ footer {
   justify-content: center;
 }
 
-/* --- FAQ Accordion --- */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -1338,7 +1297,6 @@ footer {
   line-height: 1.6;
 }
 
-/* --- Utilities --- */
 .text-center { text-align: center; }
 .w-full { width: 100%; }
 .m-auto { margin: 0 auto; }
@@ -1348,7 +1306,6 @@ footer {
 .bg-lowest { background-color: var(--color-surface-lowest); }
 .bg-dark { background-color: var(--color-secondary); color: var(--color-surface-lowest); }
 
-/* --- Refactored Responsive Blocks & Utility Classes --- */
 .section-header {
   max-width: 600px;
   margin: 0 auto 56px auto;
@@ -1440,20 +1397,19 @@ footer {
   border-left: none;
 }
 
-/* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
   :root {
     --margin-desktop: 32px;
   }
-  
+
   .nav-menu {
     display: none;
   }
-  
+
   .menu-toggle {
     display: inline-flex;
   }
-  
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
@@ -1469,53 +1425,52 @@ footer {
   .grid-12 > * {
     grid-column: 1 / -1 !important;
   }
-  
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .card-horizontal {
     flex-direction: column !important;
     min-height: auto;
   }
-  
+
   .card-horizontal .card-img-wrapper {
     width: 100% !important;
     aspect-ratio: 4 / 3;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
   }
-  
+
   .card-horizontal .card-body {
     width: 100% !important;
   }
-  
-  /* Timeline Responsive Collapse at 1024px */
+
   .timeline::before {
     left: 20px;
     transform: none;
   }
-  
+
   .timeline-item {
     flex-direction: column !important;
     align-items: flex-start;
     margin-bottom: 40px;
   }
-  
+
   .timeline-badge {
     left: 20px;
     transform: translateX(-50%);
   }
-  
+
   .timeline-panel {
     width: calc(100% - 40px);
     margin-left: 40px;
   }
-  
+
   .timeline-spacer {
     display: none;
   }
@@ -1526,34 +1481,34 @@ footer {
     --section-padding: 60px;
     --gutter: 16px;
   }
-  
+
   .container {
     padding-left: var(--margin-mobile);
     padding-right: var(--margin-mobile);
   }
-  
+
   .grid-2, .grid-3, .grid-4, .grid-12 {
     grid-template-columns: 1fr;
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .cert-container {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
     gap: 32px;
   }
-  
+
   .cert-logos {
     flex-direction: column;
     align-items: center;
     gap: 12px;
     width: 100%;
   }
-  
+
   .cert-logos span {
     border: none !important;
     font-size: 0.875rem;
@@ -1573,7 +1528,7 @@ footer {
     gap: 16px;
     width: 100%;
   }
-  
+
   .stat-item {
     border: 1px solid var(--color-border) !important;
     background-color: #ffffff;
@@ -1586,12 +1541,12 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     gap: var(--stack-md);
@@ -1621,11 +1576,10 @@ footer {
   }
 }
 
-/* --- Chic Preloader --- */
 #preloader {
   position: fixed;
   inset: 0;
-  background-color: #121c32; /* Deep Navy from brand */
+  background-color: #121c32; 
   z-index: 99999;
   display: flex;
   flex-direction: column;
@@ -1650,7 +1604,7 @@ footer {
   position: absolute;
   inset: 0;
   border: 3px solid rgba(227, 39, 38, 0.1);
-  border-top-color: #e32726; /* Brand red */
+  border-top-color: #e32726; 
   border-radius: 50%;
   animation: preloader-spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
@@ -1708,7 +1662,6 @@ footer {
   100% { opacity: 0.9; }
 }
 
-/* --- Fade-In / Reveal Scroll Entrance Animations --- */
 .reveal {
   opacity: 0;
   transform: translateY(24px);

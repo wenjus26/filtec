@@ -398,7 +398,7 @@
     <!-- Partner Hero -->
     <section class="hero hero-sm">
       <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(18,28,50,0.92) 0%, rgba(189,0,17,0.6) 100%);"></div>
-      <img src="images/hero_home.png" alt="FILTEC Partner Program" class="hero-bg">
+      <img src="images/hero_home.webp" alt="FILTEC Partner Program" class="hero-bg">
       <div class="container" style="position: relative; z-index: 2;">
         <div class="hero-content reveal">
           <div class="partner-hero-badge">
@@ -479,59 +479,133 @@
                 <input class="form-control" type="text" id="partnerFullName" name="fullName" required placeholder="Mr. / Ms. Full Name">
               </div>
               <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="partnerDesignation">Designation / Role *</label>
+                <input class="form-control" type="text" id="partnerDesignation" name="designation" required placeholder="e.g., Owner, Partner, Director">
+              </div>
+              <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="partnerPhone">WhatsApp / Mobile Number *</label>
                 <input class="form-control" type="tel" id="partnerPhone" name="phone" required placeholder="+91 99999 99999">
               </div>
-            </div>
-            <div class="form-grid-2">
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="partnerEmail">Email Address *</label>
+                <input class="form-control" type="email" id="partnerEmail" name="email" required placeholder="you@company.com">
+              </div>
             </div>
 
             <!-- Section 2: Business Details -->
             <p class="form-section-title" style="margin-top: 32px;">2. Business Details</p>
-            <div class="form-grid-2">
+            <div class="form-grid-2" style="margin-bottom: 20px;">
               <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="partnerCompany">Company / Firm Name *</label>
                 <input class="form-control" type="text" id="partnerCompany" name="company" required placeholder="Your Business Name">
               </div>
               <div class="form-group" style="margin-bottom:0">
-                <label class="form-label" for="partnerBusinessType">Business Type *</label>
-                <select class="form-control" id="partnerBusinessType" name="businessType" required style="height: 47px;">
-                  <option value="">Select Business Type</option>
-                  <option value="trader">Building Materials Trader</option>
-                  <option value="plumbing_dealer">Plumbing & Sanitary Dealer</option>
-                  <option value="hardware">Hardware & Construction Supplier</option>
-                  <option value="contractor">Civil / Infrastructure Contractor</option>
-                  <option value="irrigation">Irrigation & Agriculture Dealer</option>
-                  <option value="other">Other</option>
+                <label class="form-label" for="partnerYearsOp">Years in Business *</label>
+                <select class="form-control" id="partnerYearsOp" name="yearsInBusiness" required style="height: 47px;">
+                  <option value="">Select Years</option>
+                  <option value="0-2">0–2 years (Startup)</option>
+                  <option value="3-5">3–5 years</option>
+                  <option value="5-10">5–10 years</option>
+                  <option value="10+">10+ years</option>
                 </select>
+              </div>
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="partnerCity">City *</label>
+                <input class="form-control" type="text" id="partnerCity" name="city" required placeholder="e.g., Bhubaneswar">
+              </div>
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="partnerState">State *</label>
+                <input class="form-control" type="text" id="partnerState" name="state" required placeholder="e.g., Odisha">
               </div>
             </div>
 
-
-            <!-- Section 3: Territory & Products -->
-            <p class="form-section-title" style="margin-top: 32px;">3.  Interest</p>
-
-            <div class="territory-map-box">
-              <span class="material-symbols-outlined">info</span>
-              <p class="body-md" style="color: var(--color-text-slate); margin: 0;">Describe the geographical area you wish to cover. We typically assign exclusive territories at the district or state level depending on market potential.</p>
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label class="form-label">Business Type * (Select all that apply)</label>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin-top: 8px;">
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="businessType" value="Building Materials Trader" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Building Materials Trader</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="businessType" value="Plumbing & Sanitary Dealer" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Plumbing & Sanitary Dealer</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="businessType" value="Hardware & Construction Supplier" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Hardware & Construction Supplier</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="businessType" value="Civil / Infrastructure Contractor" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Civil / Infrastructure Contractor</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="businessType" value="Irrigation & Agriculture Dealer" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Irrigation & Agriculture Dealer</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="businessType" value="Other" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Other</span>
+                </label>
+              </div>
             </div>
 
-            <div class="form-grid-2">
+            <!-- Section 3: Preferred Territory & Products -->
+            <p class="form-section-title" style="margin-top: 32px;">3. Preferred Territory & Products</p>
+            <div class="territory-map-box" style="margin-bottom: 20px;">
+              <span class="material-symbols-outlined">info</span>
+              <p class="body-md" style="color: var(--color-text-slate); margin: 0;">We typically assign exclusive territories at the district or state level depending on market potential.</p>
+            </div>
+            
+            <div class="form-grid-2" style="margin-bottom: 20px;">
+              <div class="form-group" style="margin-bottom:0">
+                <label class="form-label" for="partnerTerritory">Preferred Territory (District / Region) *</label>
+                <input class="form-control" type="text" id="partnerTerritory" name="territory" required placeholder="e.g., Cuttack District, North Odisha">
+              </div>
               <div class="form-group" style="margin-bottom:0">
                 <label class="form-label" for="partnerVolume">Expected Monthly Volume *</label>
                 <select class="form-control" id="partnerVolume" name="expectedVolume" required style="height: 47px;">
                   <option value="">Select Volume Range</option>
-                  <option value="complete-piping-solutions">Complete Piping solutions </option>
-                  <option value="complete-piping-solutions">PVC- SWR & AGRI - Pipe & fittings </option>
-                  <option value="complete-piping-solutions">UPVC - Pipe & fittings </option>
-                  <option value="complete-piping-solutions">CPVC - Pipe & fittings </option>
-                  <option value="complete-piping-solutions">Ball valves </option>
-                  <option value="complete-piping-solutions">Solvents </option>
-                  <option value="complete-piping-solutions">Teflon Tape </option>
+                  <option value="Under 1 Lakh">Under ₹1 Lakh</option>
+                  <option value="1 - 5 Lakhs">₹1 Lakh - ₹5 Lakhs</option>
+                  <option value="5 - 10 Lakhs">₹5 Lakhs - ₹10 Lakhs</option>
+                  <option value="Above 10 Lakhs">Above ₹10 Lakhs</option>
                 </select>
               </div>
             </div>
 
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label class="form-label">Product Lines of Interest * (Select all that apply)</label>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin-top: 8px;">
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="productLines" value="Complete Piping Solutions" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Complete Piping Solutions</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="productLines" value="PVC - SWR & Agri Pipes & Fittings" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">PVC - SWR & Agri Pipes & Fittings</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="productLines" value="uPVC Pipes & Fittings" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">uPVC Pipes & Fittings</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="productLines" value="CPVC Pipes & Fittings" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">CPVC Pipes & Fittings</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="productLines" value="Ball Valves" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Ball Valves</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="productLines" value="Solvent Cement" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Solvent Cement</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; background-color: var(--color-surface-low); border: 1px solid var(--color-border); border-radius: var(--radius-default); padding: 12px; cursor: pointer; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='var(--color-surface-container)';" onmouseout="this.style.backgroundColor='var(--color-surface-low)';">
+                  <input type="checkbox" name="productLines" value="Teflon Tape" style="width: 18px; height: 18px; accent-color: var(--color-primary-container);">
+                  <span style="font-size: 0.9rem; font-weight: 500; color: var(--color-text-navy);">Teflon Tape</span>
+                </label>
+              </div>
+            </div>
 
             <!-- Section 4: Additional Info -->
             <p class="form-section-title" style="margin-top: 32px;">4. Additional Information</p>
@@ -563,7 +637,6 @@
                 </svg>
                 Send Application via WhatsApp
               </button>
-     
             </div>
 
           </form>
@@ -616,27 +689,47 @@
     // Partner form WhatsApp submission
     document.getElementById('partnerApplicationForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      if (!this.checkValidity()) {
-        this.reportValidity();
-        return;
-      }
 
       const btn = document.getElementById('partnerSubmitBtn');
       btn.disabled = true;
       btn.innerHTML = btn.innerHTML.replace('Send Application via WhatsApp', 'Preparing Message...');
+
+      // Validate checkboxes
+      const checkedBusinessTypes = Array.from(document.querySelectorAll('input[name="businessType"]:checked')).map(el => el.value);
+      if (checkedBusinessTypes.length === 0) {
+        alert("Please select at least one Business Type.");
+        btn.disabled = false;
+        btn.innerHTML = btn.innerHTML.replace('Preparing Message...', 'Send Application via WhatsApp');
+        return;
+      }
+
+      const checkedProductLines = Array.from(document.querySelectorAll('input[name="productLines"]:checked')).map(el => el.value);
+      if (checkedProductLines.length === 0) {
+        alert("Please select at least one Product Line of Interest.");
+        btn.disabled = false;
+        btn.innerHTML = btn.innerHTML.replace('Preparing Message...', 'Send Application via WhatsApp');
+        return;
+      }
+
+      if (!this.checkValidity()) {
+        this.reportValidity();
+        btn.disabled = false;
+        btn.innerHTML = btn.innerHTML.replace('Preparing Message...', 'Send Application via WhatsApp');
+        return;
+      }
 
       const name = document.getElementById('partnerFullName').value.trim();
       const designation = document.getElementById('partnerDesignation').value.trim();
       const phone = document.getElementById('partnerPhone').value.trim();
       const email = document.getElementById('partnerEmail').value.trim();
       const company = document.getElementById('partnerCompany').value.trim();
-      const businessType = document.getElementById('partnerBusinessType').options[document.getElementById('partnerBusinessType').selectedIndex].text;
+      const businessType = checkedBusinessTypes.join(', ');
       const city = document.getElementById('partnerCity').value.trim();
       const state = document.getElementById('partnerState').value.trim();
       const years = document.getElementById('partnerYearsOp').options[document.getElementById('partnerYearsOp').selectedIndex].text;
       const territory = document.getElementById('partnerTerritory').value.trim();
       const volume = document.getElementById('partnerVolume').options[document.getElementById('partnerVolume').selectedIndex].text;
-      const products = document.getElementById('partnerProductLines').options[document.getElementById('partnerProductLines').selectedIndex].text;
+      const products = checkedProductLines.join(', ');
       const brands = document.getElementById('partnerCurrentBrands').value.trim() || 'None';
       const warehouse = document.getElementById('partnerWarehouse').options[document.getElementById('partnerWarehouse').selectedIndex].text;
       const message = document.getElementById('partnerMessage').value.trim();

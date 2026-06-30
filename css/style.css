@@ -1756,9 +1756,14 @@ footer {
 
 .interest-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(227, 39, 38, 0.1);
-  border-color: var(--color-primary);
-  background-color: var(--color-surface-container);
+  box-shadow: 0 8px 24px rgba(227, 39, 38, 0.3);
+  border-color: #e32726 !important;
+  background-color: #e32726 !important;
+  color: #ffffff !important;
+}
+
+.interest-card:hover span {
+  color: #ffffff !important;
 }
 
 .interest-card input[type="checkbox"] {

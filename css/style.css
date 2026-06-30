@@ -1814,4 +1814,40 @@ footer {
   opacity: 1 !important;
 }
 
+/* ===== Desktop Navbar Layout (Logo left, Menu center, Actions right) ===== */
+.nav-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.logo-link {
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+.nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .nav-actions {
+    display: none !important;
+  }
+}
+
 

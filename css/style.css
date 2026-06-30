@@ -1810,4 +1810,8 @@ footer {
   animation-play-state: paused;
 }
 
+.reveal:hover .gallery-overlay {
+  opacity: 1 !important;
+}
+
 

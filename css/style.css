@@ -1785,3 +1785,15 @@ footer {
   transform: scale(0.98);
 }
 
+.marquee-card {
+  width: 320px !important;
+  flex-shrink: 0;
+  display: inline-flex !important;
+  flex-direction: column;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+

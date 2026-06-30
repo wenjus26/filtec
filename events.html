@@ -139,214 +139,224 @@
       </div>
     </section>
 
+    <!-- Category Filter Bar -->
+    <div style="background-color: var(--color-surface-lowest); border-bottom: 1px solid var(--color-border); padding: 16px 0; position: sticky; top: 70px; z-index: 100; backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.85);">
+      <div class="container" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <button class="filter-btn" id="btn-all" onclick="filterCategory('all')" style="background-color: #e32726; border-color: #e32726; color: #ffffff;">Show All</button>
+        <button class="filter-btn" id="btn-plumber" onclick="filterCategory('plumber')">Mega Plumber Meet</button>
+        <button class="filter-btn" id="btn-dealer" onclick="filterCategory('dealer')">Dealer Meet</button>
+      </div>
+    </div>
+
     <!-- Events Gallery Section -->
     <section class="section-padding bg-lowest">
       <div class="container">
         <!-- Gallery Grid -->
         <div class="grid grid-4 gap-md">
-          <!-- Card 1 -->
-          <div class="reveal" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 1 (Plumber) -->
+          <div class="reveal gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_1.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_1.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_1.webp" alt="Event Image 1" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_1.webp" alt="Plumber Event 1" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 2 -->
-          <div class="reveal delay-1" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 2 (Plumber) -->
+          <div class="reveal delay-1 gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_2.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_2.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_2.webp" alt="Event Image 2" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_2.webp" alt="Plumber Event 2" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 3 -->
-          <div class="reveal delay-2" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 3 (Plumber) -->
+          <div class="reveal delay-2 gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_3.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_3.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_3.webp" alt="Event Image 3" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_3.webp" alt="Plumber Event 3" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 4 -->
-          <div class="reveal delay-3" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 4 (Plumber) -->
+          <div class="reveal delay-3 gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_4.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_4.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_4.webp" alt="Event Image 4" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_4.webp" alt="Plumber Event 4" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 5 -->
-          <div class="reveal" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 5 (Plumber) -->
+          <div class="reveal gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_5.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_5.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_5.webp" alt="Event Image 5" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_5.webp" alt="Plumber Event 5" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 6 -->
-          <div class="reveal delay-1" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 6 (Plumber) -->
+          <div class="reveal delay-1 gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_6.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_6.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_6.webp" alt="Event Image 6" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_6.webp" alt="Plumber Event 6" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 7 -->
-          <div class="reveal delay-2" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 7 (Plumber) -->
+          <div class="reveal delay-2 gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_7.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_7.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_7.webp" alt="Event Image 7" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_7.webp" alt="Plumber Event 7" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 8 -->
-          <div class="reveal delay-3" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 8 (Plumber) -->
+          <div class="reveal delay-3 gallery-card" data-category="plumber" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_8.webp', '')">
+               onclick="openLightbox('images/galerie/plumber_8.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_8.webp" alt="Event Image 8" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/plumber_8.webp" alt="Plumber Event 8" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 9 -->
-          <div class="reveal" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+
+          <!-- Card 9 (Dealer) -->
+          <div class="reveal gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_9.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_1.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_9.webp" alt="Event Image 9" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_1.webp" alt="Dealer Event 1" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 10 -->
-          <div class="reveal delay-1" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 10 (Dealer) -->
+          <div class="reveal delay-1 gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_10.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_2.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_10.webp" alt="Event Image 10" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_2.webp" alt="Dealer Event 2" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 11 -->
-          <div class="reveal delay-2" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 11 (Dealer) -->
+          <div class="reveal delay-2 gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_11.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_3.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_11.webp" alt="Event Image 11" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_3.webp" alt="Dealer Event 3" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 12 -->
-          <div class="reveal delay-3" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 12 (Dealer) -->
+          <div class="reveal delay-3 gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_12.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_4.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_12.webp" alt="Event Image 12" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_4.webp" alt="Dealer Event 4" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 13 -->
-          <div class="reveal" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 13 (Dealer) -->
+          <div class="reveal gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_13.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_5.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_13.webp" alt="Event Image 13" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_5.webp" alt="Dealer Event 5" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 14 -->
-          <div class="reveal delay-1" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 14 (Dealer) -->
+          <div class="reveal delay-1 gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_14.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_6.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_14.webp" alt="Event Image 14" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_6.webp" alt="Dealer Event 6" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 15 -->
-          <div class="reveal delay-2" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 15 (Dealer) -->
+          <div class="reveal delay-2 gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_15.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_7.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_15.webp" alt="Event Image 15" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_7.webp" alt="Dealer Event 7" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
             </div>
           </div>
-          <!-- Card 16 -->
-          <div class="reveal delay-3" 
-               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
+          <!-- Card 16 (Dealer) -->
+          <div class="reveal delay-3 gallery-card" data-category="dealer" 
+               style="background-color: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.02);" 
                onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 12px 24px rgba(227, 39, 38, 0.1)'; this.style.borderColor='#e32726'; this.querySelector('.zoom-hover').style.transform='scale(1.05)';" 
                onmouseout="this.style.transform='none'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.02)'; this.style.borderColor='var(--color-border)'; this.querySelector('.zoom-hover').style.transform='scale(1)';" 
-               onclick="openLightbox('images/galerie/event_16.webp', '')">
+               onclick="openLightbox('images/galerie/dealer_8.webp', '')">
             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden; position: relative;">
-              <img src="images/galerie/event_16.webp" alt="Event Image 16" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <img src="images/galerie/dealer_8.webp" alt="Dealer Event 8" class="zoom-hover" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
               <div class="gallery-overlay" style="position: absolute; inset: 0; background: rgba(227, 39, 38, 0.15); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center;">
                 <span class="material-symbols-outlined" style="color: #ffffff; font-size: 2.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">zoom_in</span>
               </div>
@@ -406,6 +416,55 @@
   </div>
 
   <script>
+    function filterCategory(category) {
+      // Update active button styles
+      const btnAll = document.getElementById('btn-all');
+      const btnPlumber = document.getElementById('btn-plumber');
+      const btnDealer = document.getElementById('btn-dealer');
+      
+      const activeBg = '#e32726';
+      const activeColor = '#ffffff';
+      const defaultBg = 'var(--color-surface-lowest)';
+      const defaultColor = 'var(--color-text-navy)';
+      const defaultBorder = 'var(--color-border)';
+      
+      // Reset all
+      [btnAll, btnPlumber, btnDealer].forEach(btn => {
+        btn.style.backgroundColor = defaultBg;
+        btn.style.borderColor = defaultBorder;
+        btn.style.color = defaultColor;
+      });
+      
+      // Set active
+      if (category === 'all') {
+        btnAll.style.backgroundColor = activeBg;
+        btnAll.style.borderColor = activeBg;
+        btnAll.style.color = activeColor;
+      } else if (category === 'plumber') {
+        btnPlumber.style.backgroundColor = activeBg;
+        btnPlumber.style.borderColor = activeBg;
+        btnPlumber.style.color = activeColor;
+      } else if (category === 'dealer') {
+        btnDealer.style.backgroundColor = activeBg;
+        btnDealer.style.borderColor = activeBg;
+        btnDealer.style.color = activeColor;
+      }
+      
+      // Filter items
+      const cards = document.querySelectorAll('.gallery-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          // Force reflow
+          card.offsetHeight;
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
     function openLightbox(src, caption) {
       const modal = document.getElementById('lightboxModal');
       const img = document.getElementById('lightboxImg');

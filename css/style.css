@@ -1850,4 +1850,24 @@ footer {
   }
 }
 
+/* ===== Filter Buttons Styling ===== */
+.filter-btn {
+  padding: 10px 24px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-lowest);
+  color: var(--color-text-navy);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.filter-btn:hover {
+  border-color: #e32726;
+  color: #e32726;
+  transform: translateY(-1px);
+}
+
 

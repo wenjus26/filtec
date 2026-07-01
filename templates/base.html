@@ -1,0 +1,257 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}FILTEC Polyplast | High-Performance Piping & Polymer Solutions{% endblock %}</title>
+  <meta name="description" content="{% block description %}FILTEC Polyplast manufactures premium B2B polymer piping solutions, uPVC, PVC, and CPVC pipes with German extrusion technology. 100% Leak Tested.{% endblock %}">
+  
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.filtec.in{{ request.path }}">
+  <meta property="og:title" content="{% block og_title %}High-Performance Piping & Polymer Solutions | FILTEC Polyplast{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}FILTEC Polyplast manufactures premium B2B polymer piping solutions, uPVC, PVC, and CPVC pipes with German extrusion technology. 100% Leak Tested.{% endblock %}">
+  <meta property="og:image" content="https://www.filtec.in{% static 'images/og-image.png' %}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="FILTEC Polyplast">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.filtec.in{{ request.path }}">
+  <meta name="twitter:title" content="{% block twitter_title %}High-Performance Piping & Polymer Solutions | FILTEC Polyplast{% endblock %}">
+  <meta name="twitter:description" content="{% block twitter_description %}FILTEC Polyplast manufactures premium B2B polymer piping solutions, uPVC, PVC, and CPVC pipes with German extrusion technology. 100% Leak Tested.{% endblock %}">
+  <meta name="twitter:image" content="https://www.filtec.in{% static 'images/og-image.png' %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>
+    if (window.location.protocol !== 'file:') {
+      const link = document.createElement('link');
+      link.rel = 'manifest';
+      link.href = "{% static 'images/favicon/site.webmanifest' %}";
+      document.head.appendChild(link);
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  {% block extra_head %}{% endblock %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Corporation",
+    "name": "Filtec Polyplast Pvt Ltd",
+    "alternateName": "Filtec Polyplast",
+    "url": "https://www.filtec.in",
+    "logo": "https://www.filtec.in/static/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Phulnakhara",
+      "addressLocality": "Bhubaneswar",
+      "addressRegion": "Odisha",
+      "postalCode": "754001",
+      "addressCountry": "IN"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-9437505814",
+        "contactType": "sales",
+        "areaServed": "IN",
+        "availableLanguage": ["en", "hi"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-9437279149",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["en", "hi"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Chic Page Preloader -->
+  <div id="preloader">
+    <div class="preloader-spinner-wrapper">
+      <div class="preloader-outer-ring"></div>
+      <div class="preloader-inner-ring"></div>
+      <div class="preloader-logo">F</div>
+    </div>
+    <div class="preloader-text">Loading</div>
+  </div>
+
+  <!-- Top AppBar / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="{% url 'home' %}" class="logo-link">
+        <img src="{% static 'images/logo.png' %}" alt="FILTEC Polyplast Logo" class="logo-img">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="{% url 'home' %}" class="nav-link {% if active_page == 'home' %}active{% endif %}">Home</a></li>
+        <li><a href="{% url 'about' %}" class="nav-link {% if active_page == 'about' %}active{% endif %}">About</a></li>
+        <li><a href="{% url 'why_us' %}" class="nav-link {% if active_page == 'why_us' %}active{% endif %}">Why Us</a></li>
+        <li><a href="{% url 'products' %}" class="nav-link {% if active_page == 'products' %}active{% endif %}">Products</a></li>
+        <li><a href="{% url 'events' %}" class="nav-link {% if active_page == 'events' %}active{% endif %}">Events</a></li>
+        <li><a href="{% url 'contact' %}" class="nav-link {% if active_page == 'contact' %}active{% endif %}">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.me/919437505814" target="_blank" class="btn btn-primary" style="padding: 10px 16px; font-size: 0.8rem; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 6px;"><i class="fab fa-whatsapp" style="font-size: 0.95rem;"></i> Connect with us</a>
+        <a href="https://drive.google.com/file/d/1FYIWOf1C1D3GtVpjiKzBV_HQ6pRl0XXV/view" target="_blank" class="btn btn-primary" style="padding: 10px 16px; font-size: 0.8rem; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 6px;"><i class="fas fa-download" style="font-size: 0.9rem;"></i>Download Catalog</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer" id="drawer">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="drawer-logo-text">
+          <span class="brand">FILTEC</span>
+          <span class="tagline">Polyplast Pvt Ltd</span>
+        </div>
+        <button class="drawer-close" id="drawerClose">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="drawer-nav-section">
+        <span class="drawer-nav-label">Navigation</span>
+        <a href="{% url 'home' %}" class="drawer-link {% if active_page == 'home' %}active{% endif %}">
+          <span class="nav-icon material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a href="{% url 'about' %}" class="drawer-link {% if active_page == 'about' %}active{% endif %}">
+          <span class="nav-icon material-symbols-outlined">info</span>
+          About Us
+        </a>
+        <a href="{% url 'why_us' %}" class="drawer-link {% if active_page == 'why_us' %}active{% endif %}">
+          <span class="nav-icon material-symbols-outlined">verified</span>
+          Why Us
+        </a>
+        <a href="{% url 'products' %}" class="drawer-link {% if active_page == 'products' %}active{% endif %}">
+          <span class="nav-icon material-symbols-outlined">inventory_2</span>
+          Products
+        </a>
+        <a href="{% url 'events' %}" class="drawer-link {% if active_page == 'events' %}active{% endif %}">
+          <span class="nav-icon material-symbols-outlined">campaign</span>
+          Events
+        </a>
+        <a href="{% url 'contact' %}" class="drawer-link {% if active_page == 'contact' %}active{% endif %}">
+          <span class="nav-icon material-symbols-outlined">call</span>
+          Contact
+        </a>
+        <a href="https://wa.me/919437505814" target="_blank" class="drawer-link drawer-partner-btn" style="background-color: var(--color-primary-container) !important; color: #fff !important; margin-bottom: 8px; justify-content: center; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-default); padding: 12px; display: flex; align-items: center; gap: 8px;">
+          <i class="fab fa-whatsapp" style="font-size: 1.1rem;"></i>
+          Connect with us
+        </a>
+        <a href="https://drive.google.com/file/d/1FYIWOf1C1D3GtVpjiKzBV_HQ6pRl0XXV/view" target="_blank" class="drawer-link drawer-partner-btn" style="background-color: var(--color-primary-container) !important; color: #fff !important; justify-content: center; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-default); padding: 12px; display: flex; align-items: center; gap: 8px;">
+          <i class="fas fa-download" style="font-size: 1.1rem;"></i>
+          Download Catalog
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 class="headline-md" style="font-weight: 700; margin-bottom: 24px;">FILTEC Polyplast</h3>
+        <p>Premium piping solutions for a modern world. Precision engineering B2B piping products, manufactured with global quality standards.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="label-bold">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'why_us' %}">Why Us</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'events' %}">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="label-bold">Distributors</h4>
+        <ul class="footer-links">
+          <li><a href="{% url 'partner' %}">Become a Partner</a></li>
+          <li><a href="{% url 'contact' %}#faq">FAQs</a></li>
+          <li><a href="{% url 'about' %}#certifications">Certifications</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="label-bold">Contact Details</h4>
+        <p style="margin-bottom: 8px;">Unit No. 12, Bhubaneswar Industrial Estate</p>
+        <p style="margin-bottom: 8px;">Odisha, India - 754211</p>
+        <p style="margin-bottom: 8px;">Email: care@filtec.in</p>
+        <p>Phone: +91 94375 05814</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 FILTEC Polyplast. All Rights Reserved. CIN: U22208OD2025PTC0155</p>
+      <p>Built for B2B Industrial Excellence | #Let's Solve Plumbing</p>
+    </div>
+  </footer>
+
+  <!-- Product Inquiry Modal -->
+  <div class="modal" id="inquiryModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Request B2B Quote</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <form id="modalInquiryForm">
+        {% csrf_token %}
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalName">Full Name *</label>
+          <input class="form-control" type="text" id="modalName" required placeholder="Mr. / Ms. Name" style="width: 100%;">
+        </div>
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalEmail">Email Address *</label>
+          <input class="form-control" type="email" id="modalEmail" required placeholder="you@company.com" style="width: 100%;">
+        </div>
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalPhone">WhatsApp / Mobile Number *</label>
+          <input class="form-control" type="tel" id="modalPhone" required placeholder="+91 99999 99999" style="width: 100%;">
+        </div>
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="productInterest">Product / Sizing Interest *</label>
+          <input class="form-control" type="text" id="productInterest" required readonly placeholder="e.g., uPVC Pipes" style="width: 100%; background-color: var(--color-surface-low);">
+        </div>
+        <div class="form-group" style="margin-bottom: 16px;">
+          <label class="form-label" for="modalMessage">Inquiry Message *</label>
+          <textarea class="form-control" id="modalMessage" required placeholder="Specify estimated quantities, diameter class (SDR/PN rating), or custom lengths..." style="width: 100%; min-height: 80px;"></textarea>
+        </div>
+        <button class="btn btn-primary w-full" type="submit" style="padding: 12px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+          Send Quote Request via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{% static 'js/main.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

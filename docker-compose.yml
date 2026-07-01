@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: filtec-web
+    # Purely internal: no ports exposed to the host!
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+    environment:
+      - DB_ENGINE=mysql
+      - DB_NAME=filtec_db
+      - DB_USER=filtec_user
+      - DB_PASSWORD=filtec_password
+      - DB_HOST=filtec-mysql
+      - DB_PORT=3306
+    depends_on:
+      - mysql-db
+    networks:
+      - filtec-network
+
+  mysql-db:
+    image: mysql:8.0
+    container_name: filtec-mysql
+    restart: always
+    # Purely internal: no ports exposed to the host!
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=filtec_db
+      - MYSQL_USER=filtec_user
+      - MYSQL_PASSWORD=filtec_password
+      - MYSQL_ROOT_PASSWORD=filtec_root_password
+    networks:
+      - filtec-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: filtec-nginx
+    restart: always
+    ports:
+      - "8040:80"  # Expose only port 8040 to the outside world
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - static_volume:/app/staticfiles:ro
+      - media_volume:/app/media:ro
+    depends_on:
+      - web
+    networks:
+      - filtec-network
+
+volumes:
+  mysql_data:
+  static_volume:
+  media_volume:
+
+networks:
+  filtec-network:
+    driver: bridge

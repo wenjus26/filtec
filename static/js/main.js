@@ -208,9 +208,35 @@ function handleContactForm(form) {
 ${message}`;
 
         const btn = form.querySelector('button[type="submit"]');
-        animateSubmitBtn(btn, '⏳ Opening WhatsApp...', () => {
-            sendToWhatsApp(text);
-            form.reset();
+        animateSubmitBtn(btn, '⏳ Saving Lead...', () => {
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('message', `[Company: ${company}, Purpose: ${inquiry}] ${message}`);
+            
+            const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]');
+            if (csrfToken) {
+                formData.append('csrfmiddlewaretoken', csrfToken.value);
+            }
+
+            fetch('/contact/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                sendToWhatsApp(text);
+                form.reset();
+            })
+            .catch(err => {
+                console.error("Error saving lead:", err);
+                sendToWhatsApp(text);
+                form.reset();
+            });
         });
     });
 }
@@ -241,22 +267,46 @@ function handleModalForm(form) {
 ${message}`;
 
         const btn = form.querySelector('button[type="submit"]');
-        animateSubmitBtn(btn, '⏳ Opening WhatsApp...', () => {
-            sendToWhatsApp(text);
-            form.reset();
-            if (currentModal) window.closeInquiryModal();
+        animateSubmitBtn(btn, '⏳ Saving Lead...', () => {
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('message', `[Product Interest: ${product}] ${message}`);
+
+            // Find csrf token in index.html (it is in inquiryModal form)
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]');
+            if (csrfToken) {
+                formData.append('csrfmiddlewaretoken', csrfToken.value);
+            }
+
+            fetch('/contact/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                sendToWhatsApp(text);
+                form.reset();
+                if (window.closeInquiryModal) window.closeInquiryModal();
+            })
+            .catch(err => {
+                console.error("Error saving lead:", err);
+                sendToWhatsApp(text);
+                form.reset();
+                if (window.closeInquiryModal) window.closeInquiryModal();
+            });
         });
     });
 }
 
 // ─────────────────────────────────────────────
 // ③ PARTNER APPLICATION FORM  (#partnerApplicationForm)
-//    (inline handler in partner.html handles this,
-//     but we also attach here in case it's called via initForms)
 // ─────────────────────────────────────────────
 function handlePartnerForm(form) {
-    // partner.html has its own inline <script> handler.
-    // This guard prevents double-binding.
     if (form.dataset.waHandled) return;
     form.dataset.waHandled = 'true';
 
@@ -269,16 +319,30 @@ function handlePartnerForm(form) {
         const phone        = val('partnerPhone');
         const email        = val('partnerEmail');
         const company      = val('partnerCompany');
-        const bizType      = val('partnerBusinessType');
         const city         = val('partnerCity');
         const state        = val('partnerState');
         const years        = val('partnerYearsOp');
-        const territory    = val('partnerTerritory');
-        const volume       = val('partnerVolume');
-        const products     = val('partnerProductLines');
+        
+        // Dynamically collect selected business types
+        const bizTypesArray = [];
+        form.querySelectorAll('input[name="businessType"]:checked').forEach(cb => {
+            bizTypesArray.push(cb.value);
+        });
+        const bizType = bizTypesArray.join(', ') || 'Not Specified';
+
+        // Dynamically collect selected product lines
+        const productsArray = [];
+        form.querySelectorAll('input[name="productLines"]:checked').forEach(cb => {
+            productsArray.push(cb.value);
+        });
+        const products = productsArray.join(', ') || 'Not Specified';
+
+        // Fallbacks for optional fields
+        const territory    = val('partnerTerritory') || 'Not Specified';
+        const volume       = val('partnerVolume') || 'Not Specified';
         const brands       = val('partnerCurrentBrands') || 'None';
-        const warehouse    = val('partnerWarehouse');
-        const message      = val('partnerMessage');
+        const warehouse    = val('partnerWarehouse') || 'No';
+        const message      = val('partnerMessage') || 'No message provided';
 
         const text =
 `🤝 *FILTEC PARTNER APPLICATION*
@@ -302,15 +366,45 @@ function handlePartnerForm(form) {
 
 *Additional*
 🏷️ Current Brands: ${brands}
-🏪 Warehouse: ${warehouse}
+Store Warehouse: ${warehouse}
 
 💬 Message:
 ${message}`;
 
         const btn = form.querySelector('button[type="submit"]');
-        animateSubmitBtn(btn, '⏳ Opening WhatsApp...', () => {
-            sendToWhatsApp(text);
-            form.reset();
+        animateSubmitBtn(btn, '⏳ Saving Application...', () => {
+            const formData = new FormData();
+            formData.append('company_name', company);
+            formData.append('contact_person', `${name} (${designation})`);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('city', `${city}, ${state}`);
+            formData.append('warehouse', warehouse.toLowerCase() === 'yes' ? 'yes' : 'no');
+            formData.append('experience', `[BizType: ${bizType}, Years: ${years}, Territory: ${territory}, Volume: ${volume}, Products: ${products}, Brands: ${brands}]`);
+            formData.append('message', message);
+
+            const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]');
+            if (csrfToken) {
+                formData.append('csrfmiddlewaretoken', csrfToken.value);
+            }
+
+            fetch('/partner/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(res => res.json())
+            .then(data => {
+                sendToWhatsApp(text);
+                form.reset();
+            })
+            .catch(err => {
+                console.error("Error saving application:", err);
+                sendToWhatsApp(text);
+                form.reset();
+            });
         });
     });
 }
@@ -341,7 +435,7 @@ window.addEventListener('load', () => {
 // Scroll Reveal — Intersection Observer
 // ─────────────────────────────────────────────
 function initScrollReveal() {
-    const reveals = document.querySelectorAll('.reveal');
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
     if (!reveals.length) return;
 
     const observer = new IntersectionObserver((entries, obs) => {

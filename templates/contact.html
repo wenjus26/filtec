@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us | FILTEC Polyplast{% endblock %}
+{% block description %}Contact FILTEC Polyplast sales team. Submit a general inquiry, request a product quote, or get technical support for B2B piping solutions.{% endblock %}
+
+{% block content %}
+
+    <!-- Contact Hero -->
+    <section class="hero hero-sm">
+      <div class="hero-overlay" style="background: rgba(27, 42, 74, 0.85);"></div>
+      <img src="{% static 'images/hero_home.webp' %}" alt="Contact FILTEC Polyplast" class="hero-bg">
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="hero-content reveal">
+          <span class="label-bold hero-tag">Get In Touch</span>
+          <h1 class="display-lg hero-title" style="font-size: 2.75rem;">Contact Us</h1>
+          <p class="body-lg hero-desc">Need a custom quote or technical support? Reach out to our Team — we're here to serve.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form & Info split panel -->
+    <section class="section-padding bg-lowest">
+      <div class="container grid grid-2 gap-lg">
+        
+        <!-- Contact details column -->
+        <div>
+          <div class="reveal">
+            <h2 class="headline-lg" style="margin-top: 8px; margin-bottom: 32px;">Get In Touch</h2>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; gap: 32px;">
+            <!-- Address card -->
+            <div class="reveal" style="display: flex; gap: 16px; align-items: flex-start;">
+              <span class="material-symbols-outlined text-primary" style="font-size: 1.75rem; margin-top: 2px;">location_on</span>
+              <div>
+                <h4 class="headline-md" style="font-size: 1.125rem; color: var(--color-text-navy); margin-bottom: 6px;">Regd. Office</h4>
+                <p class="body-md" style="color: var(--color-text-slate);">Rich City, Phulnakhara, Bhubaneswar, Odisha, 754001<br><br> Mfg. Unit-1, Kurangasasan, Phulnakhara, Cuttack Odisha <br><br>Mfg. Unit-2, Balabhadrapur industrial estate, kendrapara, Odisha</p>
+              </div>
+            </div>
+
+            <!-- Email card -->
+            <div class="reveal delay-1" style="display: flex; gap: 16px; align-items: flex-start;">
+              <span class="material-symbols-outlined text-primary" style="font-size: 1.75rem; margin-top: 2px;">mail</span>
+              <div>
+                <h4 class="headline-md" style="font-size: 1.125rem; color: var(--color-text-navy); margin-bottom: 6px;">Corporate Emails</h4>
+                <p class="body-md" style="color: var(--color-text-slate);">care@filtec.in<br>filtec.odisha@gmail.com</p>
+              </div>
+            </div>
+
+            <!-- Phone card -->
+            <div class="reveal delay-2" style="display: flex; gap: 16px; align-items: flex-start;">
+              <span class="material-symbols-outlined text-primary" style="font-size: 1.75rem; margin-top: 2px;">phone_in_talk</span>
+              <div>
+                <h4 class="headline-md" style="font-size: 1.125rem; color: var(--color-text-navy); margin-bottom: 6px;">Contact</h4>
+                <p class="body-md" style="color: var(--color-text-slate);">+91 9437505814<br> +91 9437279149</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <div class="contact-form-box reveal delay-1">
+          <h3 class="headline-md" style="margin-bottom: 8px; color: var(--color-text-navy);">Contact Inquiry Form</h3>
+          <p class="body-md" style="margin-bottom: 24px; color: var(--color-text-slate);">Please complete the fields below. A sales executive will review your submission and respond promptly.</p>
+          
+          <form id="contactPageForm">
+            {% csrf_token %}
+            <div class="form-group">
+              <label class="form-label" for="contactName">Full Name</label>
+              <input class="form-control" type="text" id="contactName" required placeholder="John Doe">
+            </div>
+            
+            <div class="grid grid-2 gap-md" style="margin-bottom: var(--stack-md);">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="contactEmail">Email Address</label>
+                <input class="form-control" type="email" id="contactEmail" required placeholder="john@company.com">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="contactPhone">Phone Number</label>
+                <input class="form-control" type="tel" id="contactPhone" required placeholder="+91 99999 99999">
+              </div>
+            </div>
+
+            <div class="grid grid-2 gap-md" style="margin-bottom: var(--stack-md);">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="companyName">Company / Firm Name</label>
+                <input class="form-control" type="text" id="companyName" required placeholder="BuildTech Ltd.">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="inquiryType">Inquiry Purpose</label>
+                <select class="form-control" id="inquiryType" required style="height: 47px;">
+                  <option value="quote">Request Product Quote</option>
+                  <option value="technical">Technical Support Query</option>
+                  <option value="sizing">Sizing / Specifications Help</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Your Message</label>
+              <textarea class="form-control" id="contactMessage" required placeholder="Describe your requirements — product dimensions, estimated quantities, project details, or any questions..."></textarea>
+            </div>
+
+            <button class="btn btn-primary w-full" type="submit" style="margin-top: 16px; padding: 14px;">Send Message via WhatsApp</button>
+          </form>
+
+          <div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+            <p class="body-md" style="color: var(--color-text-slate); margin-bottom: 8px;">Looking to become a distributor?</p>
+            <a href="{% url 'partner' %}" class="btn btn-secondary" style="padding: 10px 24px;">Apply as Partner →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="section-padding bg-lowest">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header reveal">
+          <span class="label-bold text-primary">Sourcing Support</span>
+          <h2 class="headline-lg" style="margin-top: 8px;">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <!-- Q1 -->
+          <div class="faq-item reveal">
+            <button class="faq-question">
+              <span>What is the typical shipping lead time?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Standard dimension pipelines are ready to dispatch from our Bhubaneswar plant within 3 to 5 business days. Custom thickness runs or specific extrusion length orders depend on current manufacturing scheduling, usually completing in 10 to 14 days.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item reveal delay-1">
+            <button class="faq-question">
+              <span>Can you manufacture custom lengths or wall thicknesses?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes. We can manufacture customized extrusion lengths (e.g. 12-meter straight lengths to minimize joints) or non-standard SDR ratings, provided that the order volume meets our minimal run requirements (usually 1,000 meters).
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item reveal delay-2">
+            <button class="faq-question">
+              <span>What standards compliance certificates do you dispatch?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Every batch shipment leaves our facility stamped with the appropriate Bureau of Indian Standards (BIS) mark (IS 4984 / 4985 / 15801) and is accompanied by our internal  quality laboratory certificate detailing hydrostatic burst results.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item reveal delay-3">
+            <button class="faq-question">
+              <span>Do you supply jointing fusion machinery to distributors?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes, we supply butt-fusion welding machinery and electrofusion jointing adapters on rental or sale terms. We also provide technical instructions manuals and video modules to train installation contractors.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  
+{% endblock %}

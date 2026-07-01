@@ -1,0 +1,336 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}High-Performance Piping & Polymer Solutions | FILTEC Polyplast{% endblock %}
+{% block description %}FILTEC Polyplast manufactures premium B2B polymer piping solutions, uPVC, PVC, and CPVC pipes with German extrusion technology. 100% Leak Tested.{% endblock %}
+
+{% block content %}
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <img src="{% static 'images/engineer_site_cpvc.webp' %}" alt="FILTEC Polyplast Extrusion Facility" class="hero-bg">
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="hero-content reveal">
+          <h1 class="display-lg hero-title">Affordable Piping Solutions</h1>
+          <!-- <p class="body-lg hero-desc" style="margin-bottom: 8px;">Built for durability, chemical resistance, and structural strength.</p> -->
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(227, 39, 38, 0.15); border: 1px solid rgba(227, 39, 38, 0.3); padding: 6px 14px; border-radius: 20px; color: #fff; font-weight: 600; font-size: 0.9rem; margin-bottom: 28px; backdrop-filter: blur(4px);">
+            <span>#Let's Solve Plumbing</span>
+          </div>
+          <div class="flex gap-md flex-wrap">
+            <a href="{% url 'products' %}" class="btn btn-primary">Explore Products</a>
+            <a href="{% url 'contact' %}" class="btn btn-tertiary" style="color: #ffffff; border-color: #ffffff;">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cert-strip">
+          <h3 class="label-bld" style="color: #e92323; text-align: center; border-color: #ffffff;">Plumbing Pipes & Fittings | SWR Pipes & Fittings | Agriculture Pipes & Fittings | Solvent | Allied Products</h3>
+   
+    </section>
+
+    <!-- Product Category Showcase -->
+    <section class="section-padding bg-lowest">
+      <div class="container">
+        <div class="section-header reveal text-center" style="margin-bottom: 48px;">
+          <h2 class="headline-lg" style="margin-top: 8px; color: var(--color-text-navy);">Heavy-Duty Piping Solutions</h2>
+          <p class="body-md" style="margin-top: 12px; max-width: 700px; margin-left: auto; margin-right: auto; color: var(--color-text-slate);">
+            Discover our range of highly reliable, high-density polymer piping systems designed for fluid logistics, agriculture, plumbing, and sewage networks.
+          </p>
+        </div>
+      </div>
+
+      <!-- Infinite Product Marquee (Single Continuous Row) -->
+      <div class="marquee-container" style="margin-bottom: 50px;">
+        <div class="marquee-track marquee-left" style="animation-duration: 55s;">
+          <!-- Card 1: uPVC -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/upvc_pipes.webp' %}" alt="uPVC Pipes" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">IS 4984 compliant</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">uPVC Piping</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Flexible, lightweight pipelines designed for water networks, municipal sewage, and chemical transport.</p>
+              <a href="{% url 'products' %}?cat=upvc" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: CPVC -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/cpvc_pipes.webp' %}" alt="CPVC Pipes" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">IS 15801 compliant</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">CPVC Piping</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Co-polymer systems engineered for hot &amp; cold water plumbing, and heating layouts.</p>
+              <a href="{% url 'products' %}?cat=cpvc" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Fittings -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/upvc_cvpc_valve.webp' %}" alt="Industrial Fittings" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">IS 7834 compliant</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">Ball Valve / Fittings</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Precisely molded valves, elbows, tees, and joints to build seamless, secure piping networks.</p>
+              <a href="{% url 'products' %}?cat=fittings" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Solvent -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/pvc_solvent.webp' %}" alt="Solvent Cement" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">High Bond Strength</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">Solvent Cement</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">High-strength jointing adhesives for quick curing and leak-proof PVC connections.</p>
+              <a href="{% url 'products' %}?cat=fittings" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Teflon -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/teflon.webp' %}" alt="Teflon Tape" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">Leak-Proof Seal</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">Teflon Tape</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Thread seal tape for secure, leak-proof threaded connections in plumbing networks.</p>
+              <a href="{% url 'products' %}?cat=fittings" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6: SWR -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/product_swr.webp' %}" alt="SWR Pipes" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">IS 13592 compliant</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">SWR Systems</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Soil, Waste, and Rainwater (SWR) drainage pipes engineered for non-clogging wastewater logistics.</p>
+              <a href="{% url 'products' %}?cat=swr" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Duplicate Set for continuous loop -->
+          <!-- Card 1: uPVC -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/upvc_pipes.webp' %}" alt="uPVC Pipes" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">IS 4984 compliant</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">uPVC Piping</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Flexible, lightweight pipelines designed for water networks, municipal sewage, and chemical transport.</p>
+              <a href="{% url 'products' %}?cat=upvc" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: CPVC -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/cpvc_pipes.webp' %}" alt="CPVC Pipes" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">IS 15801 compliant</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">CPVC Piping</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Co-polymer systems engineered for hot &amp; cold water plumbing, and heating layouts.</p>
+              <a href="{% url 'products' %}?cat=cpvc" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Fittings -->
+          <div class="card-product marquee-card">
+            <div class="card-img-wrapper">
+              <img src="{% static 'images/products/upvc_cvpc_valve.webp' %}" alt="Industrial Fittings" class="card-img">
+            </div>
+            <div class="card-body">
+              <span class="label-bold text-primary" style="font-size: 0.7rem; margin-bottom: 4px;">IS 7834 compliant</span>
+              <h3 class="headline-md card-title" style="font-size: 1.2rem;">Ball Valve / Fittings</h3>
+              <p class="body-md card-desc" style="font-size: 0.875rem; color: var(--color-text-slate);">Precisely molded valves, elbows, tees, and joints to build seamless, secure piping networks.</p>
+              <a href="{% url 'products' %}?cat=fittings" class="card-link" style="color: #e32726; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
+                Technical Specs <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center reveal">
+        <a href="{% url 'products' %}" class="btn btn-secondary" style="border-radius: 30px; padding: 12px 32px;">View Complete Catalog</a>
+      </div>
+    </section>
+
+    <!-- Solvent Cement Section -->
+    <section class="section-padding bg-lowest" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container grid grid-2 align-center gap-xl">
+        <div class="card-product reveal-left" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <img src="{% static 'images/products/pvc_solvent.webp' %}" alt="FILTEC Solvent Cement" style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;" class="zoom-hover">
+        </div>
+        <div class="reveal-right">
+          <span class="label-bold text-primary">Complementary Accessories</span>
+          <h2 class="headline-lg" style="margin-top: 8px; margin-bottom: 20px; color: var(--color-text-navy);">FILTEC PVC Solvent Cement</h2>
+          <p class="body-lg" style="margin-bottom: 16px; color: var(--color-text-navy); font-weight: 600;">High-strength jointing adhesives for leak-proof connections.</p>
+          <p class="body-md" style="margin-bottom: 28px; color: var(--color-text-slate); line-height: 1.7;">
+            Specially formulated for PVC and UPVC piping networks, our solvent cement provides rapid curing and an unbreakable bond that matches the pressure rating of the pipes themselves. Indispensable for ensuring structural integrity across complex plumbing and drainage installations.
+          </p>
+          <button class="btn btn-primary" onclick="openInquiryModal('Solvent Cement')" style="padding: 12px 28px;">Request Solvent Cement Quote</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manufacturing Highlights -->
+    <section class="section-padding" style="background-color: var(--color-surface-low); border-bottom: 1px solid var(--color-border);">
+      <div class="container grid grid-2 align-center gap-xl">
+        <div class="reveal-left">
+          <span class="label-bold text-primary">Production Reliability</span>
+          <h2 class="headline-lg" style="margin-top: 8px; margin-bottom: 20px; color: var(--color-text-navy);">State-of-the-Art Extrusion</h2>
+          <p class="body-lg" style="margin-bottom: 16px; color: var(--color-text-navy); font-weight: 600;">Our state-of-the-art Manufacturing Plant ensures consistent dimensions and wall integrity.</p>
+          <p class="body-md" style="margin-bottom: 28px; color: var(--color-text-slate); line-height: 1.7;">
+            Equipped with state-of-the-art machinery and an on-site testing lab, we check every batch. High-grade additives and raw resins are processed through automated extrusion setups, avoiding joints or structural weaknesses in any meter of pipe.
+          </p>
+          
+          <div class="grid grid-2 gap-md" style="margin-bottom: 32px;">
+            <div class="reveal-scale delay-1" style="background-color: var(--color-surface-lowest); padding: 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.01);">
+              <span style="font-size: 2.25rem; font-weight: 800; color: #e32726; display: block; font-family: monospace; line-height: 1.2;">100%</span>
+              <span class="label-bold" style="font-size: 0.75rem; color: var(--color-text-navy); margin-top: 4px; display: block;">Hydrostatic Tested</span>
+            </div>
+            <div class="reveal-scale delay-2" style="background-color: var(--color-surface-lowest); padding: 24px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.01);">
+              <span style="font-size: 2.25rem; font-weight: 800; color: #e32726; display: block; font-family: monospace; line-height: 1.2;">BIS</span>
+              <span class="label-bold" style="font-size: 0.75rem; color: var(--color-text-navy); margin-top: 4px; display: block;">Compliant QC Standards</span>
+            </div>
+          </div>
+          <a href="{% url 'contact' %}" class="btn btn-primary" style="padding: 12px 32px;">Contact Us</a>
+        </div>
+        <div class="card-product reveal-right" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <img src="{% static 'images/factory_aerial_left.webp' %}" alt="Advanced Extrusion Lines" style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;" class="zoom-hover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Marquee Production Gallery -->
+    <section class="section-padding bg-lowest" style="border-bottom: 1px solid var(--color-border); overflow: hidden; padding-bottom: 80px;">
+      <div class="container">
+        <div class="section-header text-center reveal-scale" style="margin-bottom: 48px;">
+          <span class="label-bold text-primary">Manufacturing Facility Feed</span>
+          <h2 class="headline-lg" style="margin-top: 8px; color: var(--color-text-navy);">Inside Our Plant</h2>
+          <p class="body-md" style="margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--color-text-slate);">
+            Take a visual B2B tour through our automated production lines in Bhubaneswar, where quality is monitored at every millimeter.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Row 1: Right to Left -->
+      <div class="marquee-container" style="margin-bottom: 24px;">
+        <div class="marquee-track marquee-left">
+          <div class="marquee-image"><img src="{% static 'images/step_1_material.webp' %}" alt="Raw Material Blending"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_2_extrusion.webp' %}" alt="Extrusion Sizing Line"></div>
+          <div class="marquee-image"><img src="{% static 'images/factory_aerial.webp' %}" alt="Bhubaneswar Manufacturing Plant"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_1_material.webp' %}" alt="Raw Material Blending"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_2_extrusion.webp' %}" alt="Extrusion Sizing Line"></div>
+          <div class="marquee-image"><img src="{% static 'images/factory_aerial.webp' %}" alt="Bhubaneswar Manufacturing Plant"></div>
+        </div>
+      </div>
+
+      <!-- Row 2: Left to Right -->
+      <div class="marquee-container">
+        <div class="marquee-track marquee-right">
+          <div class="marquee-image"><img src="{% static 'images/step_4_cutting.webp' %}" alt="Precision Auto-Cutting"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_5_socketing.webp' %}" alt="Automated Pipe Socketing"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_6_testing.webp' %}" alt="Quality Hydrostatic Testing"></div>
+          <div class="marquee-image"><img src="{% static 'images/advanced_manufacturing_hub.webp' %}" alt="Advanced Extrusion Hub"></div>
+          <div class="marquee-image"><img src="{% static 'images/about_factory.webp' %}" alt="FILTEC Factory Floor"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_4_cutting.webp' %}" alt="Precision Auto-Cutting"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_5_socketing.webp' %}" alt="Automated Pipe Socketing"></div>
+          <div class="marquee-image"><img src="{% static 'images/step_6_testing.webp' %}" alt="Quality Hydrostatic Testing"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose FILTEC (Core Values) -->
+    <section class="section-padding bg-lowest">
+      <div class="container">
+        <div class="section-header text-center reveal-scale" style="margin-bottom: 48px;">
+          <span class="label-bold text-primary">Engineered to Exceed</span>
+          <h2 class="headline-lg" style="margin-top: 8px; color: var(--color-text-navy);">The FILTEC Quality Standard</h2>
+        </div>
+
+        <div class="features-grid">
+          <!-- Structural Precision -->
+          <div class="feature-box reveal-left" style="padding: 32px; background: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.02);"
+               onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='#e32726'; this.style.boxShadow='0 20px 40px rgba(227, 39, 38, 0.15)';"
+               onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.02)';">
+            <div class="feature-icon" style="background-color: rgba(227, 39, 38, 0.08); color: #e32726; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <span class="material-symbols-outlined" style="font-size: 1.75rem;">straighten</span>
+            </div>
+            <h3 class="headline-md" style="font-size: 1.25rem; color: var(--color-text-navy); margin-bottom: 12px;">Structural Precision</h3>
+            <p class="body-md" style="color: var(--color-text-slate); font-size: 0.95rem; line-height: 1.6;">Advanced online caliber measurement checks thickness and uniform roundness across all batch runs, preventing installation leaks.</p>
+          </div>
+
+          <!-- Extreme Durability -->
+          <div class="feature-box reveal-scale delay-1" style="padding: 32px; background: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.02);"
+               onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='#e32726'; this.style.boxShadow='0 20px 40px rgba(227, 39, 38, 0.15)';"
+               onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.02)';">
+            <div class="feature-icon" style="background-color: rgba(227, 39, 38, 0.08); color: #e32726; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <span class="material-symbols-outlined" style="font-size: 1.75rem;">gavel</span>
+            </div>
+            <h3 class="headline-md" style="font-size: 1.25rem; color: var(--color-text-navy); margin-bottom: 12px;">Extreme Durability</h3>
+            <p class="body-md" style="color: var(--color-text-slate); font-size: 0.95rem; line-height: 1.6;">Formulated to resist severe hydraulic shock loads, aggressive industrial chemicals, high temperatures, and environmental stress cracking.</p>
+          </div>
+
+          <!-- Technical Support -->
+          <div class="feature-box reveal-right delay-2" style="padding: 32px; background: var(--color-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.02);"
+               onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='#e32726'; this.style.boxShadow='0 20px 40px rgba(227, 39, 38, 0.15)';"
+               onmouseout="this.style.transform='none'; this.style.borderColor='var(--color-border)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.02)';">
+            <div class="feature-icon" style="background-color: rgba(227, 39, 38, 0.08); color: #e32726; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+              <span class="material-symbols-outlined" style="font-size: 1.75rem;">support_agent</span>
+            </div>
+            <h3 class="headline-md" style="font-size: 1.25rem; color: var(--color-text-navy); margin-bottom: 12px;">Dedicated B2B Support</h3>
+            <p class="body-md" style="color: var(--color-text-slate); font-size: 0.95rem; line-height: 1.6;">We offer customized extrusion lengths, swift logistics for infrastructure scale projects, and direct technical specifications advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section-padding" style="background-color: var(--color-surface-low); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container text-center">
+        <div class="cta-card reveal-scale" style="position: relative; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(227, 39, 38, 0.2); border-left: 5px solid #e32726; border-radius: var(--radius-lg); padding: 48px; box-shadow: 0 20px 40px rgba(18,28,50,0.05); overflow: hidden;">
+          <div style="position: absolute; right: -50px; bottom: -50px; width: 200px; height: 200px; background-color: rgba(227, 39, 38, 0.03); border-radius: var(--radius-full); z-index: 0;"></div>
+          <h2 class="display-lg" style="margin-bottom: 16px; color: var(--color-text-navy); position: relative; z-index: 1;">Ready to Source FILTEC Pipes?</h2>
+          <p class="body-lg" style="max-width: 600px; margin: 0 auto 36px auto; color: var(--color-text-slate); position: relative; z-index: 1;">Submit your dimensional specifications, quantity requirements, or talk to our team today.</p>
+          <div class="flex justify-center gap-md flex-wrap" style="position: relative; z-index: 1;">
+            <a href="{% url 'partner' %}" class="btn btn-primary" style="padding: 12px 28px;">Become a Distributor</a>
+            <button class="btn btn-secondary" onclick="openInquiryModal('General Procurement')" style="padding: 12px 28px; border-radius: 4px;">Inquire Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+{% endblock %}

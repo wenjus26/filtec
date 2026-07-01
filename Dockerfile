@@ -32,8 +32,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files and assign ownership to the non-root user
 COPY --chown=django:django . /app/
 
-# Fix Windows CRLF line endings and make entrypoint script executable (performed while still root)
-RUN dos2unix /app/docker-entrypoint.sh && chmod +x /app/docker-entrypoint.sh
+# Fix Windows CRLF line endings on entrypoint (performed while still root)
+RUN dos2unix /app/docker-entrypoint.sh && chmod 755 /app/docker-entrypoint.sh
 
 # Switch to the non-root user
 USER django
@@ -41,5 +41,5 @@ USER django
 # Expose port 8000
 EXPOSE 8000
 
-# Run entrypoint script
-ENTRYPOINT ["/app/docker-entrypoint.sh"]
+# Run entrypoint script via sh explicitly (avoids execute permission issues)
+ENTRYPOINT ["sh", "/app/docker-entrypoint.sh"]

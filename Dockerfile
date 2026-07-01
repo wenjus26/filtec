@@ -22,8 +22,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
-# Create a non-root group and user
-RUN groupadd -r django && useradd -r -g django -d /app -s /sbin/nologin django
+# Create a non-root group and user with UID/GID 1000 (matches 'ubuntu' user on VPS host)
+RUN groupadd -r -g 1000 django && useradd -r -u 1000 -g django -d /app -s /sbin/nologin django
 
 # Install python packages
 COPY requirements.txt /app/

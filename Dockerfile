@@ -1,6 +1,8 @@
 # Use official lightweight Python image
 FROM python:3.12-slim
 
+# Ensure dos2unix is available to fix Windows line endings
+
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
@@ -17,6 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libjpeg-dev \
     zlib1g-dev \
     pkg-config \
+    dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
 # Create a non-root group and user
@@ -29,8 +32,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files and assign ownership to the non-root user
 COPY --chown=django:django . /app/
 
-# Make entrypoint script executable (performed while still root)
-RUN chmod +x /app/docker-entrypoint.sh
+# Fix Windows CRLF line endings and make entrypoint script executable (performed while still root)
+RUN dos2unix /app/docker-entrypoint.sh && chmod +x /app/docker-entrypoint.sh
 
 # Switch to the non-root user
 USER django

@@ -17,6 +17,21 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = [host.strip() for host in os.environ.get('ALLOWED_HOSTS', '*').split(',') if host]
 
+# ─── CSRF Trusted Origins (required when behind Nginx reverse proxy) ──────────
+# Tells Django which domains are allowed to submit forms / AJAX POST requests.
+# Must include the full scheme (https:// or http://)
+_csrf_origins = os.environ.get(
+    'CSRF_TRUSTED_ORIGINS',
+    'http://localhost,http://127.0.0.1,http://web.filtec.in,https://web.filtec.in'
+)
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf_origins.split(',') if o.strip()]
+
+# ─── Reverse Proxy Headers ────────────────────────────────────────────────────
+# Tell Django to trust the X-Forwarded-Proto header from Nginx
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
 # Application definition
 INSTALLED_APPS = [
     # Jazzmin UI theme (must be placed before django.contrib.admin)

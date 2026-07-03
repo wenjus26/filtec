@@ -31,14 +31,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script>
-    if (window.location.protocol !== 'file:') {
-      const link = document.createElement('link');
-      link.rel = 'manifest';
-      link.href = "{% static 'images/favicon/site.webmanifest' %}";
-      document.head.appendChild(link);
-    }
-  </script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#e32726">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="FILTEC">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   
   {% block extra_head %}{% endblock %}
@@ -252,6 +249,19 @@
   </div>
 
   <script src="{% static 'js/main.js' %}"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('FILTEC ServiceWorker registered successfully with scope: ', registration.scope);
+          })
+          .catch(err => {
+            console.error('FILTEC ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
   {% block extra_js %}{% endblock %}
 </body>
 </html>

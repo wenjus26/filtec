@@ -1,0 +1,24 @@
+{
+  "name": "FILTEC Polyplast",
+  "short_name": "FILTEC",
+  "description": "High-Performance Piping & Polymer Solutions | FILTEC Polyplast Pvt Ltd",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#e32726",
+  "icons": [
+    {
+      "src": "{% static 'images/favicon/android-chrome-192x192.png' %}",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "{% static 'images/favicon/android-chrome-512x512.png' %}",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

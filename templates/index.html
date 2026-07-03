@@ -25,10 +25,181 @@
       </div>
     </section>
 
-    <section class="cert-strip">
-          <h3 class="label-bld" style="color: #e92323; text-align: center; border-color: #ffffff;">Plumbing Pipes & Fittings | SWR Pipes & Fittings | Agriculture Pipes & Fittings | Solvent | Allied Products</h3>
-   
+    <!-- Animated Water / Sea Banner -->
+    <section class="water-banner">
+      <!-- Animated SVG waves stacked -->
+      <div class="water-waves">
+        <svg class="wave wave-1" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,60 C240,110 480,10 720,60 C960,110 1200,10 1440,60 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.08)"/>
+        </svg>
+        <svg class="wave wave-2" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C360,90 720,0 1080,50 C1260,75 1380,30 1440,40 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.06)"/>
+        </svg>
+        <svg class="wave wave-3" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,70 C180,20 360,100 540,60 C720,20 900,100 1080,60 C1260,20 1380,80 1440,70 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.04)"/>
+        </svg>
+      </div>
+
+      <!-- Floating bubbles -->
+      <div class="water-bubbles">
+        <span class="bubble b1"></span>
+        <span class="bubble b2"></span>
+        <span class="bubble b3"></span>
+        <span class="bubble b4"></span>
+        <span class="bubble b5"></span>
+        <span class="bubble b6"></span>
+        <span class="bubble b7"></span>
+        <span class="bubble b8"></span>
+      </div>
+
+      <!-- Scrolling product category marquee -->
+      <div class="water-content">
+        <div class="water-marquee-wrapper">
+          <div class="water-marquee-track">
+            <span class="water-item"><i class="fas fa-tint"></i> Plumbing Pipes &amp; Fittings</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-water"></i> SWR Pipes &amp; Fittings</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-leaf"></i> Agriculture Pipes &amp; Fittings</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-flask"></i> Solvent Cement</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-boxes"></i> Allied Products</span>
+            <span class="water-sep">◆</span>
+            <!-- Duplicate for infinite loop -->
+            <span class="water-item"><i class="fas fa-tint"></i> Plumbing Pipes &amp; Fittings</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-water"></i> SWR Pipes &amp; Fittings</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-leaf"></i> Agriculture Pipes &amp; Fittings</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-flask"></i> Solvent Cement</span>
+            <span class="water-sep">◆</span>
+            <span class="water-item"><i class="fas fa-boxes"></i> Allied Products</span>
+            <span class="water-sep">◆</span>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Water Banner Styles (scoped inline to avoid polluting global CSS) -->
+    <style>
+      .water-banner {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #0a2d6e 0%, #1147a8 30%, #0e6eb8 60%, #0ea5c8 100%);
+        padding: 28px 0 32px;
+        min-height: 100px;
+      }
+
+      /* ── Waves ── */
+      .water-waves {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        transform-origin: bottom center;
+      }
+      .wave-1 { animation: waveFlow1 8s ease-in-out infinite; opacity: 1; }
+      .wave-2 { animation: waveFlow2 10s ease-in-out infinite; opacity: 1; }
+      .wave-3 { animation: waveFlow3 12s ease-in-out infinite; opacity: 1; }
+
+      @keyframes waveFlow1 {
+        0%, 100% { transform: translateX(0) scaleY(1); }
+        50%       { transform: translateX(-25%) scaleY(1.1); }
+      }
+      @keyframes waveFlow2 {
+        0%, 100% { transform: translateX(-10%) scaleY(0.95); }
+        50%       { transform: translateX(15%) scaleY(1.05); }
+      }
+      @keyframes waveFlow3 {
+        0%, 100% { transform: translateX(5%) scaleY(1); }
+        50%       { transform: translateX(-20%) scaleY(1.08); }
+      }
+
+      /* ── Bubbles ── */
+      .water-bubbles {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .bubble {
+        position: absolute;
+        bottom: -20px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        animation: bubbleRise linear infinite;
+      }
+      .b1  { width:10px; height:10px; left:5%;   animation-duration:6s;  animation-delay:0s;   }
+      .b2  { width:16px; height:16px; left:12%;  animation-duration:8s;  animation-delay:1.2s; }
+      .b3  { width: 8px; height: 8px; left:22%;  animation-duration:5s;  animation-delay:0.5s; }
+      .b4  { width:14px; height:14px; left:38%;  animation-duration:9s;  animation-delay:2s;   }
+      .b5  { width: 6px; height: 6px; left:52%;  animation-duration:7s;  animation-delay:0.8s; }
+      .b6  { width:18px; height:18px; left:65%;  animation-duration:10s; animation-delay:1.5s; }
+      .b7  { width:10px; height:10px; left:78%;  animation-duration:6s;  animation-delay:3s;   }
+      .b8  { width:12px; height:12px; left:90%;  animation-duration:8s;  animation-delay:0.3s; }
+
+      @keyframes bubbleRise {
+        0%   { transform: translateY(0) scale(1);    opacity: 0.7; }
+        80%  { opacity: 0.4; }
+        100% { transform: translateY(-120px) scale(1.3); opacity: 0; }
+      }
+
+      /* ── Marquee Content ── */
+      .water-content {
+        position: relative;
+        z-index: 2;
+      }
+      .water-marquee-wrapper {
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      }
+      .water-marquee-track {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        white-space: nowrap;
+        animation: waterScroll 30s linear infinite;
+        width: max-content;
+      }
+      .water-marquee-track:hover { animation-play-state: paused; }
+
+      @keyframes waterScroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .water-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 28px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+      }
+      .water-item i {
+        font-size: 1.1rem;
+        color: rgba(255,255,255,0.75);
+      }
+      .water-sep {
+        color: rgba(255,255,255,0.4);
+        font-size: 0.7rem;
+        padding: 0 4px;
+      }
+    </style>
+
 
     <!-- Product Category Showcase -->
     <section class="section-padding bg-lowest">
@@ -187,30 +358,14 @@
       </div>
     </section>
 
-    <!-- Solvent Cement Section -->
-    <section class="section-padding bg-lowest" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-      <div class="container grid grid-2 align-center gap-xl">
-        <div class="card-product reveal-left" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-          <img src="{% static 'images/products/pvc_solvent.webp' %}" alt="FILTEC Solvent Cement" style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;" class="zoom-hover">
-        </div>
-        <div class="reveal-right">
-          <span class="label-bold text-primary">Complementary Accessories</span>
-          <h2 class="headline-lg" style="margin-top: 8px; margin-bottom: 20px; color: var(--color-text-navy);">FILTEC PVC Solvent Cement</h2>
-          <p class="body-lg" style="margin-bottom: 16px; color: var(--color-text-navy); font-weight: 600;">High-strength jointing adhesives for leak-proof connections.</p>
-          <p class="body-md" style="margin-bottom: 28px; color: var(--color-text-slate); line-height: 1.7;">
-            Specially formulated for PVC and UPVC piping networks, our solvent cement provides rapid curing and an unbreakable bond that matches the pressure rating of the pipes themselves. Indispensable for ensuring structural integrity across complex plumbing and drainage installations.
-          </p>
-          <button class="btn btn-primary" onclick="openInquiryModal('Solvent Cement')" style="padding: 12px 28px;">Request Solvent Cement Quote</button>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Manufacturing Highlights -->
     <section class="section-padding" style="background-color: var(--color-surface-low); border-bottom: 1px solid var(--color-border);">
       <div class="container grid grid-2 align-center gap-xl">
         <div class="reveal-left">
           <span class="label-bold text-primary">Production Reliability</span>
-          <h2 class="headline-lg" style="margin-top: 8px; margin-bottom: 20px; color: var(--color-text-navy);">State-of-the-Art Extrusion</h2>
+          <h2 class="headline-lg" style="margin-top: 8px; margin-bottom: 20px; color: var(--color-text-navy);">State-of-the-Art Manufacturing Plant</h2>
           <p class="body-lg" style="margin-bottom: 16px; color: var(--color-text-navy); font-weight: 600;">Our state-of-the-art Manufacturing Plant ensures consistent dimensions and wall integrity.</p>
           <p class="body-md" style="margin-bottom: 28px; color: var(--color-text-slate); line-height: 1.7;">
             Equipped with state-of-the-art machinery and an on-site testing lab, we check every batch. High-grade additives and raw resins are processed through automated extrusion setups, avoiding joints or structural weaknesses in any meter of pipe.
@@ -234,44 +389,7 @@
       </div>
     </section>
 
-    <!-- Infinite Marquee Production Gallery -->
-    <section class="section-padding bg-lowest" style="border-bottom: 1px solid var(--color-border); overflow: hidden; padding-bottom: 80px;">
-      <div class="container">
-        <div class="section-header text-center reveal-scale" style="margin-bottom: 48px;">
-          <span class="label-bold text-primary">Manufacturing Facility Feed</span>
-          <h2 class="headline-lg" style="margin-top: 8px; color: var(--color-text-navy);">Inside Our Plant</h2>
-          <p class="body-md" style="margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--color-text-slate);">
-            Take a visual B2B tour through our automated production lines in Bhubaneswar, where quality is monitored at every millimeter.
-          </p>
-        </div>
-      </div>
-      
-      <!-- Row 1: Right to Left -->
-      <div class="marquee-container" style="margin-bottom: 24px;">
-        <div class="marquee-track marquee-left">
-          <div class="marquee-image"><img src="{% static 'images/step_1_material.webp' %}" alt="Raw Material Blending"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_2_extrusion.webp' %}" alt="Extrusion Sizing Line"></div>
-          <div class="marquee-image"><img src="{% static 'images/factory_aerial.webp' %}" alt="Bhubaneswar Manufacturing Plant"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_1_material.webp' %}" alt="Raw Material Blending"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_2_extrusion.webp' %}" alt="Extrusion Sizing Line"></div>
-          <div class="marquee-image"><img src="{% static 'images/factory_aerial.webp' %}" alt="Bhubaneswar Manufacturing Plant"></div>
-        </div>
-      </div>
 
-      <!-- Row 2: Left to Right -->
-      <div class="marquee-container">
-        <div class="marquee-track marquee-right">
-          <div class="marquee-image"><img src="{% static 'images/step_4_cutting.webp' %}" alt="Precision Auto-Cutting"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_5_socketing.webp' %}" alt="Automated Pipe Socketing"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_6_testing.webp' %}" alt="Quality Hydrostatic Testing"></div>
-          <div class="marquee-image"><img src="{% static 'images/advanced_manufacturing_hub.webp' %}" alt="Advanced Extrusion Hub"></div>
-          <div class="marquee-image"><img src="{% static 'images/about_factory.webp' %}" alt="FILTEC Factory Floor"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_4_cutting.webp' %}" alt="Precision Auto-Cutting"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_5_socketing.webp' %}" alt="Automated Pipe Socketing"></div>
-          <div class="marquee-image"><img src="{% static 'images/step_6_testing.webp' %}" alt="Quality Hydrostatic Testing"></div>
-        </div>
-      </div>
-    </section>
 
     <!-- Why Choose FILTEC (Core Values) -->
     <section class="section-padding bg-lowest">

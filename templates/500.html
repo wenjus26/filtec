@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Internal Server Error (500) | FILTEC Polyplast{% endblock %}
+{% block description %}An unexpected server error occurred. Please try again or return to FILTEC Polyplast homepage.{% endblock %}
+
+{% block content %}
+<section class="section-padding bg-lowest flex align-center justify-center" style="min-height: calc(100vh - 250px); padding-top: 120px; padding-bottom: 80px; position: relative; overflow: hidden;">
+  
+  <!-- Background error waves -->
+  <div class="error-water-bg" style="position: absolute; inset: 0; opacity: 0.05; pointer-events: none; z-index: 1;">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+      <path d="M0,160 C320,80 640,240 960,160 C1280,80 1440,160 1440,160 L1440,320 L0,320 Z" fill="#e32726"/>
+    </svg>
+  </div>
+
+  <div class="container text-center" style="position: relative; z-index: 2; max-width: 600px;">
+    
+    <!-- Animated Piping Graphic / 500 Illustration -->
+    <div class="error-illustration" style="margin-bottom: 40px; display: inline-flex; align-items: center; justify-content: center; position: relative;">
+      <div class="pipe-circle" style="width: 140px; height: 140px; border: 8px solid #e32726; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; animation: pulseGlowError 3s ease-in-out infinite;">
+        <span class="material-symbols-outlined text-primary" style="font-size: 5rem; animation: shakeError 0.5s ease-in-out infinite alternate;">error</span>
+      </div>
+    </div>
+
+    <!-- Error Text -->
+    <h1 class="display-lg text-navy" style="font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; line-height: 1; margin-bottom: 16px;">500</h1>
+    <h2 class="headline-md" style="margin-bottom: 16px; color: var(--color-text-navy);">Internal Flow Interrupted</h2>
+    <p class="body-lg" style="color: var(--color-text-slate); margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+      An unexpected internal server connection issue has occurred. Our engineers have been notified and are resolving this loop. Please try reloading or return to safety.
+    </p>
+
+    <!-- Call to Actions -->
+    <div class="flex justify-center gap-md flex-wrap">
+      <button onclick="window.location.reload();" class="btn btn-primary" style="padding: 14px 32px; border-radius: 30px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(227, 39, 38, 0.25);">
+        <span class="material-symbols-outlined" style="font-size: 1.25rem;">refresh</span> Reload Page
+      </button>
+      <a href="{% url 'home' %}" class="btn btn-tertiary" style="padding: 14px 32px; border-radius: 30px; border-color: var(--color-border); color: var(--color-text-navy); display: inline-flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined" style="font-size: 1.25rem;">home</span> Back to Home
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Scoped styles for 500 page animations -->
+<style>
+  @keyframes pulseGlowError {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(227, 39, 38, 0.2); border-color: #e32726; }
+    50% { box-shadow: 0 0 30px 10px rgba(227, 39, 38, 0.1); border-color: #ff4847; }
+  }
+  @keyframes shakeError {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+  }
+</style>
+{% endblock %}

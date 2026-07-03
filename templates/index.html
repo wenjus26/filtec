@@ -25,180 +25,292 @@
       </div>
     </section>
 
-    <!-- Animated Water / Sea Banner -->
-    <section class="water-banner">
-      <!-- Animated SVG waves stacked -->
-      <div class="water-waves">
-        <svg class="wave wave-1" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,60 C240,110 480,10 720,60 C960,110 1200,10 1440,60 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.08)"/>
+    <!-- ═══════════════════════════════════════════════
+         ULTRA-ANIMATED WATER / SEA BANNER
+    ═══════════════════════════════════════════════ -->
+    <section class="wb">
+
+      <!-- Deep ocean animated gradient background -->
+      <div class="wb-bg"></div>
+
+      <!-- Light caustics shimmer overlay -->
+      <div class="wb-caustics"></div>
+
+      <!-- 5 stacked SVG wave layers -->
+      <div class="wb-waves">
+        <svg class="wb-wave w1" viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <path d="M0,80 C200,140 400,20 600,80 C800,140 1000,20 1200,80 C1320,110 1400,60 1440,80 L1440,160 L0,160 Z" fill="rgba(255,255,255,0.12)"/>
         </svg>
-        <svg class="wave wave-2" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,40 C360,90 720,0 1080,50 C1260,75 1380,30 1440,40 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.06)"/>
+        <svg class="wb-wave w2" viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <path d="M0,50 C300,110 600,10 900,60 C1100,95 1300,30 1440,55 L1440,160 L0,160 Z" fill="rgba(100,210,255,0.10)"/>
         </svg>
-        <svg class="wave wave-3" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,70 C180,20 360,100 540,60 C720,20 900,100 1080,60 C1260,20 1380,80 1440,70 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.04)"/>
+        <svg class="wb-wave w3" viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <path d="M0,100 C180,40 360,130 540,80 C720,30 900,120 1080,70 C1260,20 1380,90 1440,100 L1440,160 L0,160 Z" fill="rgba(255,255,255,0.07)"/>
+        </svg>
+        <svg class="wb-wave w4" viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <path d="M0,60 C120,20 240,100 360,60 C480,20 600,100 720,60 C840,20 960,100 1080,60 C1200,20 1320,80 1440,60 L1440,160 L0,160 Z" fill="rgba(0,180,255,0.08)"/>
+        </svg>
+        <svg class="wb-wave w5" viewBox="0 0 1440 160" preserveAspectRatio="none">
+          <path d="M0,120 C240,60 480,150 720,100 C960,50 1200,140 1440,90 L1440,160 L0,160 Z" fill="rgba(255,255,255,0.04)"/>
         </svg>
       </div>
 
-      <!-- Floating bubbles -->
-      <div class="water-bubbles">
-        <span class="bubble b1"></span>
-        <span class="bubble b2"></span>
-        <span class="bubble b3"></span>
-        <span class="bubble b4"></span>
-        <span class="bubble b5"></span>
-        <span class="bubble b6"></span>
-        <span class="bubble b7"></span>
-        <span class="bubble b8"></span>
+      <!-- 16 bubbles of varied size & speed -->
+      <div class="wb-bubbles">
+        <span class="wb-b" style="width:8px;height:8px;left:3%;animation-duration:5s;animation-delay:0s"></span>
+        <span class="wb-b" style="width:14px;height:14px;left:9%;animation-duration:7s;animation-delay:0.8s"></span>
+        <span class="wb-b" style="width:6px;height:6px;left:15%;animation-duration:4.5s;animation-delay:1.5s"></span>
+        <span class="wb-b" style="width:20px;height:20px;left:22%;animation-duration:9s;animation-delay:0.3s"></span>
+        <span class="wb-b" style="width:10px;height:10px;left:30%;animation-duration:6s;animation-delay:2s"></span>
+        <span class="wb-b" style="width:5px;height:5px;left:38%;animation-duration:4s;animation-delay:1s"></span>
+        <span class="wb-b" style="width:16px;height:16px;left:46%;animation-duration:8s;animation-delay:0.5s"></span>
+        <span class="wb-b" style="width:9px;height:9px;left:53%;animation-duration:5.5s;animation-delay:3s"></span>
+        <span class="wb-b" style="width:22px;height:22px;left:60%;animation-duration:10s;animation-delay:1.8s"></span>
+        <span class="wb-b" style="width:7px;height:7px;left:67%;animation-duration:5s;animation-delay:0.2s"></span>
+        <span class="wb-b" style="width:13px;height:13px;left:73%;animation-duration:7.5s;animation-delay:2.5s"></span>
+        <span class="wb-b" style="width:5px;height:5px;left:79%;animation-duration:4s;animation-delay:1.2s"></span>
+        <span class="wb-b" style="width:18px;height:18px;left:84%;animation-duration:9s;animation-delay:0.7s"></span>
+        <span class="wb-b" style="width:8px;height:8px;left:89%;animation-duration:6s;animation-delay:3.5s"></span>
+        <span class="wb-b" style="width:11px;height:11px;left:94%;animation-duration:7s;animation-delay:1s"></span>
+        <span class="wb-b" style="width:6px;height:6px;left:97%;animation-duration:5s;animation-delay:2.2s"></span>
       </div>
 
-      <!-- Scrolling product category marquee -->
-      <div class="water-content">
-        <div class="water-marquee-wrapper">
-          <div class="water-marquee-track">
-            <span class="water-item"><i class="fas fa-tint"></i> Plumbing Pipes &amp; Fittings</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-water"></i> SWR Pipes &amp; Fittings</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-leaf"></i> Agriculture Pipes &amp; Fittings</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-flask"></i> Solvent Cement</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-boxes"></i> Allied Products</span>
-            <span class="water-sep">◆</span>
-            <!-- Duplicate for infinite loop -->
-            <span class="water-item"><i class="fas fa-tint"></i> Plumbing Pipes &amp; Fittings</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-water"></i> SWR Pipes &amp; Fittings</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-leaf"></i> Agriculture Pipes &amp; Fittings</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-flask"></i> Solvent Cement</span>
-            <span class="water-sep">◆</span>
-            <span class="water-item"><i class="fas fa-boxes"></i> Allied Products</span>
-            <span class="water-sep">◆</span>
+      <!-- Animated light shafts (god rays) -->
+      <div class="wb-rays">
+        <div class="wb-ray r1"></div>
+        <div class="wb-ray r2"></div>
+        <div class="wb-ray r3"></div>
+        <div class="wb-ray r4"></div>
+      </div>
+
+      <!-- Marquee content -->
+      <div class="wb-content">
+        <div class="wb-marquee-wrap">
+          <div class="wb-marquee-track">
+            <span class="wb-item"><i class="fas fa-tint"></i> Plumbing Pipes &amp; Fittings</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-water"></i> SWR Pipes &amp; Fittings</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-leaf"></i> Agriculture Pipes &amp; Fittings</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-flask"></i> Solvent Cement</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-boxes"></i> Allied Products</span>
+            <span class="wb-sep">◆</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="wb-item"><i class="fas fa-tint"></i> Plumbing Pipes &amp; Fittings</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-water"></i> SWR Pipes &amp; Fittings</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-leaf"></i> Agriculture Pipes &amp; Fittings</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-flask"></i> Solvent Cement</span>
+            <span class="wb-sep">◆</span>
+            <span class="wb-item"><i class="fas fa-boxes"></i> Allied Products</span>
+            <span class="wb-sep">◆</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Water Banner Styles (scoped inline to avoid polluting global CSS) -->
     <style>
-      .water-banner {
+      /* ══════════════════════════════════════════
+         ULTRA WATER BANNER
+      ══════════════════════════════════════════ */
+      .wb {
         position: relative;
         overflow: hidden;
-        background: linear-gradient(135deg, #0a2d6e 0%, #1147a8 30%, #0e6eb8 60%, #0ea5c8 100%);
-        padding: 28px 0 32px;
-        min-height: 100px;
+        min-height: 120px;
+        padding: 32px 0 36px;
       }
 
-      /* ── Waves ── */
-      .water-waves {
+      /* Deep animated gradient */
+      .wb-bg {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg,
+          #020f2e 0%,
+          #062460 20%,
+          #0a3d8f 40%,
+          #0d6fba 60%,
+          #0a9fd8 80%,
+          #06c8f0 100%
+        );
+        background-size: 300% 300%;
+        animation: wbGradShift 8s ease-in-out infinite;
+      }
+      @keyframes wbGradShift {
+        0%,100% { background-position: 0% 50%; }
+        50%      { background-position: 100% 50%; }
+      }
+
+      /* Caustics shimmer */
+      .wb-caustics {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 120px 40px at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 70%),
+          radial-gradient(ellipse 80px 30px at 55% 30%, rgba(255,255,255,0.05) 0%, transparent 70%),
+          radial-gradient(ellipse 100px 35px at 80% 65%, rgba(255,255,255,0.04) 0%, transparent 70%);
+        animation: wbCaustics 4s ease-in-out infinite alternate;
+      }
+      @keyframes wbCaustics {
+        0%   { transform: scale(1) translateX(0); opacity: 0.6; }
+        50%  { transform: scale(1.1) translateX(2%); opacity: 1; }
+        100% { transform: scale(0.95) translateX(-2%); opacity: 0.7; }
+      }
+
+      /* Waves */
+      .wb-waves {
         position: absolute;
         inset: 0;
         pointer-events: none;
       }
-      .wave {
+      .wb-wave {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 200%;
         height: 100%;
-        transform-origin: bottom center;
       }
-      .wave-1 { animation: waveFlow1 8s ease-in-out infinite; opacity: 1; }
-      .wave-2 { animation: waveFlow2 10s ease-in-out infinite; opacity: 1; }
-      .wave-3 { animation: waveFlow3 12s ease-in-out infinite; opacity: 1; }
+      .w1 { animation: wbW1 5s ease-in-out infinite; }
+      .w2 { animation: wbW2 7s ease-in-out infinite; }
+      .w3 { animation: wbW3 9s ease-in-out infinite; }
+      .w4 { animation: wbW4 6s ease-in-out infinite reverse; }
+      .w5 { animation: wbW5 11s ease-in-out infinite; }
 
-      @keyframes waveFlow1 {
-        0%, 100% { transform: translateX(0) scaleY(1); }
-        50%       { transform: translateX(-25%) scaleY(1.1); }
+      @keyframes wbW1 {
+        0%,100% { transform: translateX(0)    scaleY(1); }
+        50%      { transform: translateX(-22%) scaleY(1.15); }
       }
-      @keyframes waveFlow2 {
-        0%, 100% { transform: translateX(-10%) scaleY(0.95); }
-        50%       { transform: translateX(15%) scaleY(1.05); }
+      @keyframes wbW2 {
+        0%,100% { transform: translateX(-8%)  scaleY(0.9); }
+        50%      { transform: translateX(18%)  scaleY(1.1); }
       }
-      @keyframes waveFlow3 {
-        0%, 100% { transform: translateX(5%) scaleY(1); }
-        50%       { transform: translateX(-20%) scaleY(1.08); }
+      @keyframes wbW3 {
+        0%,100% { transform: translateX(4%)   scaleY(1); }
+        50%      { transform: translateX(-18%) scaleY(1.12); }
+      }
+      @keyframes wbW4 {
+        0%,100% { transform: translateX(0)    scaleY(1.05); }
+        50%      { transform: translateX(-30%) scaleY(0.9); }
+      }
+      @keyframes wbW5 {
+        0%,100% { transform: translateX(-5%)  scaleY(1); }
+        50%      { transform: translateX(15%)  scaleY(1.08); }
       }
 
-      /* ── Bubbles ── */
-      .water-bubbles {
+      /* Bubbles */
+      .wb-bubbles {
         position: absolute;
         inset: 0;
         pointer-events: none;
       }
-      .bubble {
+      .wb-b {
         position: absolute;
-        bottom: -20px;
+        bottom: -24px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        animation: bubbleRise linear infinite;
+        background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.5), rgba(255,255,255,0.08));
+        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow: inset 0 0 4px rgba(255,255,255,0.3);
+        animation: wbBubble ease-in infinite;
       }
-      .b1  { width:10px; height:10px; left:5%;   animation-duration:6s;  animation-delay:0s;   }
-      .b2  { width:16px; height:16px; left:12%;  animation-duration:8s;  animation-delay:1.2s; }
-      .b3  { width: 8px; height: 8px; left:22%;  animation-duration:5s;  animation-delay:0.5s; }
-      .b4  { width:14px; height:14px; left:38%;  animation-duration:9s;  animation-delay:2s;   }
-      .b5  { width: 6px; height: 6px; left:52%;  animation-duration:7s;  animation-delay:0.8s; }
-      .b6  { width:18px; height:18px; left:65%;  animation-duration:10s; animation-delay:1.5s; }
-      .b7  { width:10px; height:10px; left:78%;  animation-duration:6s;  animation-delay:3s;   }
-      .b8  { width:12px; height:12px; left:90%;  animation-duration:8s;  animation-delay:0.3s; }
-
-      @keyframes bubbleRise {
-        0%   { transform: translateY(0) scale(1);    opacity: 0.7; }
-        80%  { opacity: 0.4; }
-        100% { transform: translateY(-120px) scale(1.3); opacity: 0; }
+      @keyframes wbBubble {
+        0%   { transform: translateY(0)      translateX(0)    scale(1);   opacity: 0.8; }
+        25%  { transform: translateY(-30px)  translateX(6px)  scale(1.05); }
+        50%  { transform: translateY(-60px)  translateX(-4px) scale(1.1); opacity: 0.5; }
+        75%  { transform: translateY(-90px)  translateX(5px)  scale(1.15); opacity: 0.3; }
+        100% { transform: translateY(-140px) translateX(0)    scale(1.3); opacity: 0; }
       }
 
-      /* ── Marquee Content ── */
-      .water-content {
-        position: relative;
-        z-index: 2;
-      }
-      .water-marquee-wrapper {
+      /* God rays */
+      .wb-rays {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
         overflow: hidden;
-        mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
       }
-      .water-marquee-track {
+      .wb-ray {
+        position: absolute;
+        top: -20%;
+        width: 60px;
+        height: 180%;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.08) 0%, transparent 100%);
+        transform-origin: top center;
+        border-radius: 50%;
+        filter: blur(8px);
+        animation: wbRay ease-in-out infinite;
+      }
+      .r1 { left: 15%; animation-duration: 6s;  animation-delay: 0s;   transform: rotate(-15deg); }
+      .r2 { left: 35%; animation-duration: 8s;  animation-delay: 1.5s; transform: rotate(10deg);  }
+      .r3 { left: 62%; animation-duration: 7s;  animation-delay: 0.8s; transform: rotate(-8deg);  }
+      .r4 { left: 82%; animation-duration: 9s;  animation-delay: 2.5s; transform: rotate(12deg);  }
+      @keyframes wbRay {
+        0%,100% { opacity: 0.1; transform-origin: top center; }
+        50%      { opacity: 0.5; }
+      }
+
+      /* Marquee */
+      .wb-content {
+        position: relative;
+        z-index: 5;
+      }
+      .wb-marquee-wrap {
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      }
+      .wb-marquee-track {
         display: flex;
         align-items: center;
-        gap: 0;
         white-space: nowrap;
-        animation: waterScroll 30s linear infinite;
         width: max-content;
+        animation: wbScroll 20s linear infinite;
       }
-      .water-marquee-track:hover { animation-play-state: paused; }
-
-      @keyframes waterScroll {
+      .wb-marquee-track:hover { animation-play-state: paused; }
+      @keyframes wbScroll {
         0%   { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
 
-      .water-item {
+      .wb-item {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        padding: 0 28px;
-        font-size: 1rem;
-        font-weight: 700;
+        gap: 12px;
+        padding: 6px 32px;
+        font-size: 1.05rem;
+        font-weight: 800;
         color: #ffffff;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
-        text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+        text-shadow: 0 0 12px rgba(0,200,255,0.6), 0 2px 8px rgba(0,0,0,0.4);
+        transition: text-shadow 0.3s;
       }
-      .water-item i {
-        font-size: 1.1rem;
-        color: rgba(255,255,255,0.75);
+      .wb-item:hover {
+        text-shadow: 0 0 24px rgba(0,220,255,1), 0 2px 8px rgba(0,0,0,0.4);
       }
-      .water-sep {
-        color: rgba(255,255,255,0.4);
-        font-size: 0.7rem;
+      .wb-item i {
+        font-size: 1.2rem;
+        color: rgba(100,230,255,0.9);
+        filter: drop-shadow(0 0 6px rgba(0,200,255,0.8));
+        animation: wbIconPulse 2s ease-in-out infinite;
+      }
+      @keyframes wbIconPulse {
+        0%,100% { filter: drop-shadow(0 0 4px rgba(0,200,255,0.6)); }
+        50%      { filter: drop-shadow(0 0 12px rgba(0,230,255,1)); }
+      }
+      .wb-sep {
+        color: rgba(100,210,255,0.5);
+        font-size: 0.65rem;
         padding: 0 4px;
+        animation: wbSepPulse 3s ease-in-out infinite;
+      }
+      @keyframes wbSepPulse {
+        0%,100% { opacity: 0.4; }
+        50%      { opacity: 1; }
       }
     </style>
+
 
 
     <!-- Product Category Showcase -->

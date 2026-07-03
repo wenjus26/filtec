@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Mega Plumber Meet &amp; Dealer Meet | FILTEC Polyplast{% endblock %}
+{% block title %}Events & Highlights | FILTEC Polyplast{% endblock %}
 {% block description %}Explore FILTEC Polyplast's media events, plant visits, and latest exhibition highlights.{% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
     <section class="section-padding" style="background-image: linear-gradient(rgba(27, 42, 74, 0.85), rgba(27, 42, 74, 0.95)), url('{% static 'images/factory_aerial_left.webp' %}'); background-size: cover; background-position: center; color: #ffffff; padding-top: 160px; padding-bottom: 80px; border-bottom: 1px solid var(--color-border);">
       <div class="container text-center reveal">
         <span class="label-bold" style="background: rgba(227, 39, 38, 0.2); border: 1px solid rgba(227, 39, 38, 0.4); padding: 6px 14px; border-radius: 20px; color: #ffffff; font-size: 0.875rem;">Media &amp; Events</span>
-        <h1 class="headline-xl" style="margin-top: 20px; margin-bottom: 20px; color: #ffffff;">Mega Plumber Meet &amp; Dealer Meet</h1>
+        <h1 class="headline-xl" style="margin-top: 20px; margin-bottom: 20px; color: #ffffff;">Events &amp; Highlights</h1>
         <p class="body-lg" style="max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
           Explore our plant highlights, customer meets, exhibition booths, and recent B2B trade association events.
         </p>
@@ -22,9 +22,7 @@
       <div class="container">
         <!-- Events Grid -->
         <h2 class="headline-lg text-center" style="margin-bottom: 8px; color: var(--color-text-navy);">Our Events</h2>
-        <p class="body-md text-center" style="max-width: 600px; margin: 0 auto 40px auto; color: var(--color-text-slate);">
-          Discover our dealer networks, plumber meets, and plant conferences. Click "View Event Details" to see all photos and rich event descriptions.
-        </p>
+
 
         <div class="grid grid-2 gap-lg" style="margin-bottom: 40px;">
           {% if events %}

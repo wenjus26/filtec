@@ -1,3 +1,4 @@
+{% load static %}
 const CACHE_NAME = 'filtec-cache-v1';
 const STATIC_ASSETS = [
   '/',

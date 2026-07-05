@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /ckeditor/
+
+Sitemap: https://www.filtec.in/sitemap.xml

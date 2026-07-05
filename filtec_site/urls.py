@@ -17,6 +17,10 @@ urlpatterns = [
     path('manifest.json', TemplateView.as_view(template_name='manifest.json', content_type='application/json'), name='manifest_json'),
     path('sw.js', TemplateView.as_view(template_name='sw.js', content_type='application/javascript'), name='service_worker_js'),
     
+    # Robots.txt & sitemap.xml for SEO
+    path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain'), name='robots_txt'),
+    path('sitemap.xml', include('core.urls')), # We can delegate to core.urls or import directly
+    
     path('', include('core.urls')),
 ]
 

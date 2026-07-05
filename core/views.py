@@ -94,3 +94,12 @@ def partner_view(request):
         return redirect('partner')
         
     return render(request, 'partner.html', {'active_page': 'partner'})
+
+def sitemap_view(request):
+    events = Event.objects.all().order_by('-created_at')
+    return render(
+        request, 
+        'sitemap.xml', 
+        {'events': events}, 
+        content_type='application/xml'
+    )

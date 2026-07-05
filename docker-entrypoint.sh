@@ -34,8 +34,6 @@ python manage.py migrate
 echo "Collecting static files..."
 python manage.py collectstatic --noinput
 
-echo "Seeding the FILTEC database with initial B2B products and events..."
-python seed_db.py
 
 echo "Starting FILTEC Polyplast web server..."
 exec python manage.py runserver 0.0.0.0:8000

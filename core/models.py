@@ -68,3 +68,18 @@ class PartnerApplication(models.Model):
 
     def __str__(self):
         return f"Partner App: {self.company_name} by {self.contact_person}"
+
+class Catalog(models.Model):
+    title = models.CharField(max_length=200, default="FILTEC Polyplast Catalog")
+    embed_url = models.URLField(
+        max_length=1000,
+        help_text="OneDrive or Google Drive embed URL. (e.g., https://onedrive.live.com/embed?resid=... or Google Drive preview URL)."
+    )
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(
+        default=True, 
+        help_text="Set to True to make this the active catalog on the website. Only one should be active at a time."
+    )
+
+    def __str__(self):
+        return f"{self.title} (Updated: {self.updated_at.strftime('%Y-%m-%d')})"

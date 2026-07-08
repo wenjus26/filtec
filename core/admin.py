@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Event, EventImage, ContactSubmission, PartnerApplication
+from .models import Product, Event, EventImage, ContactSubmission, PartnerApplication, Catalog
 
 class EventImageInline(admin.TabularInline):
     model = EventImage
@@ -47,3 +47,16 @@ class PartnerApplicationAdmin(admin.ModelAdmin):
 
     def has_delete_permission(self, request, obj=None):
         return False
+
+@admin.register(Catalog)
+class CatalogAdmin(admin.ModelAdmin):
+    list_display = ('title', 'updated_at', 'is_active')
+    list_filter = ('is_active',)
+    search_fields = ('title',)
+    ordering = ('-updated_at',)
+
+    def save_model(self, request, obj, form, change):
+        if obj.is_active:
+            # Set all other active catalogs to inactive
+            Catalog.objects.filter(is_active=True).exclude(pk=obj.pk).update(is_active=False)
+        super().save_model(request, obj, form, change)

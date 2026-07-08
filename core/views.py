@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.http import JsonResponse
-from .models import Product, Event, EventImage, ContactSubmission, PartnerApplication
+from .models import Product, Event, EventImage, ContactSubmission, PartnerApplication, Catalog
 
 def home_view(request):
     return render(request, 'index.html', {'active_page': 'home'})
@@ -103,3 +103,17 @@ def sitemap_view(request):
         {'events': events}, 
         content_type='application/xml'
     )
+
+def catalog_view(request):
+    try:
+        active_catalog = Catalog.objects.filter(is_active=True).first()
+    except Exception:
+        active_catalog = None
+    
+    default_embed_url = "/static/test_catalog.pdf"
+    catalog_url = active_catalog.embed_url if (active_catalog and active_catalog.embed_url) else default_embed_url
+    
+    return render(request, 'catalog.html', {
+        'active_page': 'catalog',
+        'catalog_url': catalog_url,
+    })

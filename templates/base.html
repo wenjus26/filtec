@@ -141,7 +141,7 @@
       </ul>
       <div class="nav-actions">
         <a href="https://wa.me/919437505814" target="_blank" class="btn btn-primary" style="padding: 10px 16px; font-size: 0.8rem; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 6px;"><i class="fab fa-whatsapp" style="font-size: 0.95rem;"></i> Connect with us</a>
-        <button onclick="openCatalogModal()" class="btn btn-primary" style="padding: 10px 16px; font-size: 0.8rem; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; border: none;"><i class="fas fa-book-open" style="font-size: 0.9rem;"></i>View Catalog</button>
+        <a href="{% url 'catalog' %}" class="btn btn-primary" style="padding: 10px 16px; font-size: 0.8rem; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 6px;"><i class="fas fa-book-open" style="font-size: 0.9rem;"></i>View Catalog</a>
       </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
         <div class="hamburger-icon">
@@ -196,10 +196,10 @@
           <i class="fab fa-whatsapp" style="font-size: 1.1rem;"></i>
           Connect with us
         </a>
-        <button onclick="openCatalogModal()" class="drawer-link drawer-partner-btn" style="background-color: var(--color-primary-container) !important; color: #fff !important; justify-content: center; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-default); padding: 12px; display: flex; align-items: center; gap: 8px; width: 100%; border: none; cursor: pointer;">
+        <a href="{% url 'catalog' %}" class="drawer-link drawer-partner-btn" style="background-color: var(--color-primary-container) !important; color: #fff !important; justify-content: center; text-transform: uppercase; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-default); padding: 12px; display: flex; align-items: center; gap: 8px; text-decoration: none;">
           <i class="fas fa-book-open" style="font-size: 1.1rem;"></i>
           View Catalog
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -287,82 +287,6 @@
         </button>
       </form>
   </div>
-
-  <!-- Catalog Viewer Modal (Read-only, styled exactly like user's template) -->
-  <div class="modal" id="catalogModal">
-    <div class="modal-backdrop" onclick="closeCatalogModal()" style="background-color: rgba(240, 242, 245, 0.95);"></div>
-    <div class="modal-content modal-catalog" style="max-width: 1000px; width: 92%; height: 90vh; padding: 40px 30px 30px 30px; display: flex; flex-direction: column; z-index: 1001; position: relative; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid var(--color-border);">
-      
-      <!-- Close button positioned absolutely in top right -->
-      <button class="modal-close" onclick="closeCatalogModal()" aria-label="Close catalog modal" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.75rem; cursor: pointer; color: var(--color-text-slate); display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; transition: color 0.2s;">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-
-      <!-- Centered Header Section from template -->
-      <div class="header-section" style="text-align: center; margin-bottom: 30px; border-bottom: 3px solid #e32726; padding-bottom: 20px; flex-shrink: 0; width: 100%;">
-        <h1 style="color: #000000; font-size: 2.2rem; font-weight: bold; text-transform: uppercase; font-family: Arial, sans-serif; margin: 0; line-height: 1.2;">
-          <i class="fas fa-book-open" style="color: #e32726; margin-right: 15px;"></i>Catalogue de Société
-        </h1>
-        <p style="color: #333333; font-size: 1.2rem; margin-top: 10px; margin-bottom: 0; font-weight: 500;">
-          Prenez connaissance de notre catalogue de produits et spécifications techniques.
-        </p>
-      </div>
-
-      <!-- Lecteur PDF Inline from template -->
-      <div class="pdf-container" style="flex: 1; width: 100%; border: 2px solid #dee2e6; border-radius: 8px; overflow: hidden; background: #e9ecef; position: relative;">
-        <!-- #toolbar=0&navpanes=0 to hide download and printing tools -->
-        <iframe id="catalogIframe" src="" width="100%" height="100%" style="border: none; display: block; min-height: 450px;" title="Lecture du Catalogue Technique" allowfullscreen>
-          <!-- Message de secours si le navigateur bloque les iframes -->
-          <p style="padding: 20px; text-align: center; color: #000;">
-            Votre navigateur ne supporte pas l'affichage PDF en ligne.
-            <a href="{{ active_catalog_url }}" style="color: #e32726; text-decoration: underline;">Cliquez ici pour l'ouvrir.</a>
-          </p>
-        </iframe>
-      </div>
-    </div>
-  </div>
-
-  <style>
-    /* Prevent standard user interaction on catalog wrapper to discourage download attempts */
-    .modal-catalog {
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
-    }
-    .modal.open .modal-catalog {
-      transform: translateY(0);
-    }
-  </style>
-
-  <script>
-    function openCatalogModal() {
-      const modal = document.getElementById('catalogModal');
-      const iframe = document.getElementById('catalogIframe');
-      if (modal && iframe) {
-        // Load active catalog embed URL dynamically
-        iframe.src = "{{ active_catalog_url }}";
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeCatalogModal() {
-      const modal = document.getElementById('catalogModal');
-      const iframe = document.getElementById('catalogIframe');
-      if (modal && iframe) {
-        iframe.src = "";
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    }
-
-    // Esc key close handling
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeCatalogModal();
-      }
-    });
-  </script>
-
   <script src="{% static 'js/main.js' %}"></script>
   <script>
     if ('serviceWorker' in navigator) {

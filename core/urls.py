@@ -10,5 +10,6 @@ urlpatterns = [
     path('events/<uuid:event_id>/', views.event_detail_view, name='event_detail'),
     path('contact/', views.contact_view, name='contact'),
     path('partner/', views.partner_view, name='partner'),
+    path('catalog/', views.catalog_view, name='catalog'),
     path('', views.sitemap_view, name='sitemap_xml'),
 ]

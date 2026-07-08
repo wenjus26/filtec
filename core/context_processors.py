@@ -6,12 +6,13 @@ def catalog_processor(request):
     except Exception:
         active_catalog = None
 
-    default_embed_url = "https://drive.google.com/file/d/1FYIWOf1C1D3GtVpjiKzBV_HQ6pRl0XXV/preview"
+    # Local static PDF path to bypass cross-origin browser CSP iframe blocking on localhost
+    default_embed_url = "/static/test_catalog.pdf"
     
     if active_catalog and active_catalog.embed_url:
         catalog_url = active_catalog.embed_url
     else:
-        # Fallback to embeddable Google Drive Preview URL
+        # Fallback to public test PDF
         catalog_url = default_embed_url
 
     return {

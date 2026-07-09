@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Catalogue Technique - FILTEC Polyplast{% endblock %}
+{% block title %}Product Catalog - FILTEC Polyplast{% endblock %}
 
 {% block content %}
 <div class="page-container" style="padding: 120px 15px 60px 15px; background-color: #f0f2f5; min-height: 100vh;">
@@ -12,10 +12,10 @@
             style="text-align: center; margin-bottom: 30px; border-bottom: 3px solid #e32726; padding-bottom: 20px;">
             <h1
                 style="color: #000000; font-size: 2.2rem; font-weight: bold; text-transform: uppercase; font-family: Arial, sans-serif; margin: 0;">
-                <i class="fas fa-book-open" style="color: #e32726; margin-right: 15px;"></i>Catalogue de Société
+                <i class="fas fa-book-open" style="color: #e32726; margin-right: 15px;"></i>Company Product Catalog
             </h1>
             <p style="color: #333333; font-size: 1.2rem; margin-top: 10px; margin-bottom: 0; font-weight: 500;">
-                Prenez connaissance de notre catalogue de produits et spécifications techniques.
+                Review our official product catalog and technical specifications.
             </p>
         </div>
 
@@ -24,12 +24,12 @@
             style="width: 100%; border: 2px solid #dee2e6; border-radius: 8px; overflow: hidden; background: #e9ecef;">
             <!-- #toolbar=0&navpanes=0 to hide download options -->
             <iframe src="{{ catalog_url }}#toolbar=0&navpanes=0&view=FitH" width="100%" height="800px"
-                style="border: none; display: block; min-height: 800px;" title="Lecture du Catalogue Technique"
+                style="border: none; display: block; min-height: 800px;" title="Product Catalog Viewer"
                 allowfullscreen>
                 <!-- Message de secours si le navigateur bloque les iframes -->
                 <p style="padding: 20px; text-align: center; color: #000;">
-                    Votre navigateur ne supporte pas l'affichage PDF en ligne.
-                    <a href="{{ catalog_url }}" style="color: #e32726; text-decoration: underline;">Cliquez ici pour l'ouvrir.</a>
+                    Your browser does not support inline PDF viewing.
+                    <a href="{{ catalog_url }}" style="color: #e32726; text-decoration: underline;">Click here to open it.</a>
                 </p>
             </iframe>
         </div>
